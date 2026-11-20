@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería fotográfica | RELISEVILLA</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #183653; background: #fff; }
+    .galeria { max-width: 1200px; margin: auto; padding: 28px 18px; }
+    .cabecera { background: linear-gradient(120deg, #123b68, #246da5); color: white; border-radius: 20px; padding: 36px 30px; margin-bottom: 26px; }
+    .cabecera small { letter-spacing: 2px; font-weight: bold; color: #d9ebff; }
+    h1 { font-size: clamp(25px, 4vw, 36px); margin: 12px 0; }
+    .cabecera p { line-height: 1.6; margin-bottom: 0; }
+    .controles { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+    select { padding: 12px 18px; border: 1px solid #cbd9e6; border-radius: 12px; font-size: 15px; color: #183653; background: white; }
+    select:focus-visible, a:focus-visible { outline: 3px solid #d5a94e; outline-offset: 3px; }
+    .rejilla { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .tarjeta { display: block; text-decoration: none; color: inherit; border: 1px solid #e4eaf0; border-radius: 18px; overflow: hidden; background: white; transition: transform .2s, box-shadow .2s; }
+    .tarjeta:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(18, 59, 104, .13); }
+    .imagen { width: 100%; height: 195px; object-fit: cover; background: #e9f1f9; display: block; }
+    .sin-imagen { height: 195px; background: linear-gradient(135deg, #dcecf9, #f2f7fc); display: flex; justify-content: center; align-items: center; font-size: 45px; }
+    .contenido { padding: 20px; }
+    .contenido h2 { font-size: 18px; line-height: 1.4; margin: 0 0 12px; overflow-wrap: anywhere; }
+    .contenido p { color: #66788a; font-size: 13px; margin: 0 0 14px; }
+    .enlace { font-weight: bold; color: #1767a2; font-size: 14px; }
+    .estado { padding: 32px; text-align: center; color: #66788a; }
+    @media (max-width: 800px) { .rejilla { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .rejilla { grid-template-columns: 1fr; } .cabecera { padding: 28px 22px; } .imagen, .sin-imagen { height: 210px; } }
+  </style>
+</head>
+<body>
+  <main class="galeria">
+    <header class="cabecera">
+      <small>RELISEVILLA · NUESTRA COMUNIDAD</small>
+      <h1>Momentos que compartimos</h1>
+      <p>Jornadas, encuentros, formación y experiencias del profesorado de Religión Católica de Sevilla.</p>
+    </header>
+    <div class="controles">
+      <label for="curso"><strong>Curso escolar:</strong></label>
+      <select id="curso" aria-label="Seleccionar curso escolar"></select>
+    </div>
+    <div id="resultado" class="estado" aria-live="polite">Cargando álbumes...</div>
+  </main>
+  <script>
+    let datos = [];
+    const selector = document.getElementById('curso');
+    const resultado = document.getElementById('resultado');
+    selector.addEventListener('change', mostrarCurso);
+
+    function mostrarCurso() {
+      const curso = datos.find(c => c.nombre === selector.value);
+      resultado.replaceChildren();
+      if (!curso || !Array.isArray(curso.albumes) || curso.albumes.length === 0) {
+        resultado.className = 'estado';
+        resultado.textContent = 'Todavía no hay álbumes en este curso.';
+        return;
+      }
+      resultado.className = 'rejilla';
+      curso.albumes.forEach(album => {
+        const tarjeta = document.createElement('a');
+        tarjeta.className = 'tarjeta';
+        tarjeta.href = album.url;
+        tarjeta.target = '_blank';
+        tarjeta.rel = 'noopener noreferrer';
+        if (album.portada) {
+          const imagen = document.createElement('img');
+          imagen.className = 'imagen';
+          imagen.src = album.portada;
+          imagen.alt = 'Fotografía de ' + album.titulo;
+          imagen.loading = 'lazy';
+          imagen.onerror = () => {
+            const reemplazo = document.createElement('div');
+            reemplazo.className = 'sin-imagen';
+            reemplazo.textContent = '📷';
+            imagen.replaceWith(reemplazo);
+          };
+          tarjeta.appendChild(imagen);
+        } else {
+          const vacia = document.createElement('div');
+          vacia.className = 'sin-imagen';
+          vacia.textContent = '📷';
+          tarjeta.appendChild(vacia);
+        }
+        const contenido = document.createElement('div');
+        contenido.className = 'contenido';
+        const titulo = document.createElement('h2');
+        titulo.textContent = album.titulo;
+        const cantidad = document.createElement('p');
+        cantidad.textContent = album.cantidad + ' fotografías';
+        const enlace = document.createElement('span');
+        enlace.className = 'enlace';
+        enlace.textContent = 'Ver álbum completo →';
+        contenido.append(titulo, cantidad, enlace);
+        tarjeta.appendChild(contenido);
+        resultado.appendChild(tarjeta);
+      });
+    }
+
+    async function cargarGaleria() {
+      try {
+        const respuesta = await fetch('./recursos.json', { cache: 'no-store' });
+        if (!respuesta.ok) throw new Error('HTTP ' + respuesta.status);
+        const contenido = await respuesta.json();
+        if (!Array.isArray(contenido)) throw new Error('Formato de catálogo incorrecto');
+        datos = contenido;
+        selector.replaceChildren();
+        datos.forEach(curso => {
+          const opcion = document.createElement('option');
+          opcion.value = curso.nombre;
+          opcion.textContent = curso.nombre;
+          selector.appendChild(opcion);
+        });
+        if (!datos.length) {
+          resultado.textContent = 'Todavía no hay cursos publicados.';
+          return;
+        }
+        mostrarCurso();
+      } catch (error) {
+        resultado.className = 'estado';
+        resultado.textContent = 'No se han podido cargar los álbumes. Comprueba que existe galeria/recursos.json.';
+        console.error('Error cargando galería:', error);
+      }
+    }
+    cargarGaleria();
+  </script>
+</body>
+</html>
