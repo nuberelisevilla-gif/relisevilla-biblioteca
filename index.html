@@ -355,6 +355,21 @@
         font-size: 19px;
       }
     }
+
+    /* ÚLTIMOS RECURSOS INCORPORADOS */
+    .novedades { margin: 0 0 24px; }
+    .novedades-encabezado { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+    .novedades-encabezado h2 { margin:0; color:var(--azul-oscuro); font-size:23px; }
+    .novedades-encabezado p { margin:2px 0 0; font-size:13px; color:var(--gris); }
+    .novedades-lista { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; }
+    .novedades .tarjeta { position:relative; }
+    .novedades .miniatura { height:150px; max-height:150px; }
+    .novedades .tarjeta-nombre { font-size:13px; line-height:1.4; font-weight:bold; overflow-wrap:anywhere; }
+    .novedades .tarjeta-fecha { color:var(--gris); font-size:11px; }
+    .novedades .tarjeta .enlace { margin-top:auto; }
+    .novedades-vacio { color:var(--gris); font-size:14px; }
+    @media (max-width:700px) { .novedades-lista { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:440px) { .novedades-lista { gap:10px; } .novedades .miniatura { height:120px; max-height:120px; } .novedades-encabezado h2 { font-size:20px; } }
   </style>
 </head>
 
@@ -416,6 +431,17 @@
     ¡Gracias por acompañarnos en esta renovación!
   </p>
 </div>
+
+
+    <section class="novedades" id="seccion-novedades" aria-label="Últimos materiales añadidos" hidden>
+      <div class="novedades-encabezado">
+        <div>
+          <h2>✨ Últimos recursos añadidos</h2>
+          <p>Descubre las incorporaciones más recientes a nuestra biblioteca.</p>
+        </div>
+      </div>
+      <div id="novedades-lista" class="novedades-lista"></div>
+    </section>
 
     <section class="panel-busqueda">
       <h2>Encuentra recursos para tu aula</h2>
@@ -601,6 +627,30 @@
       return tarjeta;
     }
 
+
+    function dibujarNovedades() {
+      const seccion = document.getElementById('seccion-novedades');
+      const lista = document.getElementById('novedades-lista');
+      const recientes = materiales
+        .filter(recurso => Number.isFinite(Number(recurso.fechaIncorporacion)) && Number(recurso.fechaIncorporacion) > 0)
+        .sort((a, b) => Number(b.fechaIncorporacion) - Number(a.fechaIncorporacion) || a.nombre.localeCompare(b.nombre, 'es'))
+        .slice(0, 6);
+
+      lista.replaceChildren();
+      seccion.hidden = recientes.length === 0;
+      recientes.forEach(recurso => {
+        const tarjeta = crearTarjeta(recurso);
+        const nombre = crearElemento('div', 'tarjeta-nombre', recurso.nombre);
+        const fecha = new Date(Number(recurso.fechaIncorporacion));
+        const etiquetaFecha = crearElemento('div', 'tarjeta-fecha',
+          'Incorporado: ' + fecha.toLocaleDateString('es-ES', { day:'numeric', month:'long', year:'numeric' }));
+        const enlace = tarjeta.querySelector('.enlace');
+        tarjeta.insertBefore(nombre, enlace);
+        tarjeta.insertBefore(etiquetaFecha, enlace);
+        lista.appendChild(tarjeta);
+      });
+    }
+
     function dibujarRecursos() {
       const texto = normalizar(buscar.value.trim());
 
@@ -645,6 +695,7 @@
       .then(datos => {
         materiales = Array.isArray(datos) ? datos : [];
         dibujarCategorias();
+        dibujarNovedades();
         dibujarRecursos();
       })
       .catch(() => {
