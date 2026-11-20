@@ -1,0 +1,489 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #243746;
+      background: #f5f8fb;
+      line-height: 1.5;
+    }
+
+    .videoteca {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+    }
+
+    .cabecera {
+      background: linear-gradient(125deg, #15384e, #28617c);
+      color: white;
+      border-radius: 18px;
+      padding: 32px 28px;
+      margin-bottom: 22px;
+    }
+
+    .cabecera .etiqueta {
+      color: #f3d58d;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .cabecera h1 {
+      margin: 10px 0;
+      font-size: clamp(24px, 4vw, 34px);
+      line-height: 1.2;
+    }
+
+    .cabecera p {
+      margin: 0;
+      max-width: 750px;
+      color: #e4eff5;
+      font-size: 15px;
+    }
+
+    .filtros {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 12px;
+      background: white;
+      padding: 18px;
+      border: 1px solid #e0eaf0;
+      border-radius: 16px;
+      margin-bottom: 18px;
+    }
+
+    .campo label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #15384e;
+    }
+
+    .campo input,
+    .campo select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbdbe5;
+      border-radius: 9px;
+      background: white;
+      color: #243746;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .campo input:focus,
+    .campo select:focus,
+    .tarjeta a:focus-visible {
+      outline: 3px solid #d5a94e;
+      outline-offset: 2px;
+    }
+
+    .contador {
+      font-size: 14px;
+      color: #506779;
+      margin: 12px 2px 18px;
+    }
+
+    .rejilla {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .tarjeta {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid #e0eaf0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(21, 56, 78, .06);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 22px rgba(21, 56, 78, .12);
+    }
+
+    .visual {
+      min-height: 115px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #eaf3f8, #dcecf5);
+      font-size: 46px;
+    }
+
+    .contenido {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .categoria {
+      color: #28617c;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .tarjeta h2 {
+      margin: 9px 0;
+      color: #15384e;
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    .etapas {
+      color: #607486;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .descripcion {
+      margin: 0 0 20px;
+      color: #43596b;
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 11px 15px;
+      border-radius: 9px;
+      background: #28617c;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .boton:hover {
+      background: #15384e;
+    }
+
+    .estado {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 45px 15px;
+      color: #607486;
+      background: white;
+      border-radius: 14px;
+    }
+
+    .pie {
+      text-align: center;
+      font-size: 13px;
+      color: #607486;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 850px) {
+      .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .filtros,
+      .rejilla {
+        grid-template-columns: 1fr;
+      }
+
+      .cabecera {
+        padding: 26px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="videoteca">
+
+    <header class="cabecera">
+      <div class="etiqueta">Recursos audiovisuales · RELISEVILLA</div>
+      <h1>Videoteca educativa de Religión</h1>
+      <p>
+        Descubre vídeos, canales y listas de reproducción de YouTube
+        para las clases de Religión Católica, junto con videotutoriales
+        y recursos de formación para el profesorado.
+      </p>
+    </header>
+
+    <section class="filtros" aria-label="Buscar y filtrar vídeos">
+      <div class="campo">
+        <label for="busqueda">Buscar recursos</label>
+        <input
+          type="search"
+          id="busqueda"
+          placeholder="Ej.: parábolas, Navidad, Canva..."
+        >
+      </div>
+
+      <div class="campo">
+        <label for="categoria">Categoría</label>
+        <select id="categoria">
+          <option value="">Todas las categorías</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="etapa">Etapa educativa</label>
+        <select id="etapa">
+          <option value="">Todas las etapas</option>
+          <option value="Infantil">Infantil</option>
+          <option value="Primaria">Primaria</option>
+          <option value="Secundaria">Secundaria</option>
+          <option value="Bachillerato">Bachillerato</option>
+          <option value="Docentes">Docentes</option>
+        </select>
+      </div>
+    </section>
+
+    <p class="contador" id="contador" aria-live="polite">
+      Cargando recursos...
+    </p>
+
+    <section class="rejilla" id="resultados" aria-label="Recursos de la videoteca">
+      <div class="estado">Preparando la videoteca...</div>
+    </section>
+
+    <p class="pie">
+      RELISEVILLA · Selección de recursos educativos enlazados
+      a sus canales y publicaciones originales.
+    </p>
+
+  </main>
+
+  <script>
+    let recursos = [];
+
+    const busqueda = document.getElementById('busqueda');
+    const categoria = document.getElementById('categoria');
+    const etapa = document.getElementById('etapa');
+    const resultados = document.getElementById('resultados');
+    const contador = document.getElementById('contador');
+
+    function normalizar(texto) {
+      return String(texto || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .trim();
+    }
+
+    function separar(texto) {
+      return String(texto || '')
+        .split(',')
+        .map(valor => normalizar(valor))
+        .filter(Boolean);
+    }
+
+    function icono(categoriaTexto) {
+      const c = normalizar(categoriaTexto);
+
+      if (c.includes('tutorial')) return '💻';
+      if (c.includes('formacion')) return '🎓';
+      if (c.includes('musica') || c.includes('cancion')) return '🎵';
+      if (c.includes('pelicula') || c.includes('corto')) return '🎬';
+      if (c.includes('valor')) return '❤️';
+      if (c.includes('liturg')) return '🕯️';
+      if (c.includes('iglesia') || c.includes('sacramento')) return '⛪';
+      if (c.includes('biblia') || c.includes('jesus')) return '📖';
+
+      return '▶️';
+    }
+
+    function enlaceSeguro(url) {
+      try {
+        const enlace = new URL(url);
+        const dominio = enlace.hostname.toLowerCase();
+
+        if (
+          enlace.protocol === 'https:' &&
+          (
+            dominio === 'youtube.com' ||
+            dominio === 'www.youtube.com' ||
+            dominio === 'm.youtube.com' ||
+            dominio === 'youtu.be'
+          )
+        ) {
+          return enlace.href;
+        }
+      } catch (error) {}
+
+      return null;
+    }
+
+    function crearTarjeta(recurso) {
+      const tarjeta = document.createElement('article');
+      tarjeta.className = 'tarjeta';
+
+      const visual = document.createElement('div');
+      visual.className = 'visual';
+      visual.setAttribute('aria-hidden', 'true');
+      visual.textContent = icono(recurso.categoria);
+
+      const contenido = document.createElement('div');
+      contenido.className = 'contenido';
+
+      const categoriaTexto = document.createElement('div');
+      categoriaTexto.className = 'categoria';
+      categoriaTexto.textContent = recurso.categoria || 'Recurso educativo';
+
+      const titulo = document.createElement('h2');
+      titulo.textContent = recurso.titulo;
+
+      const etapas = document.createElement('div');
+      etapas.className = 'etapas';
+      etapas.textContent = 'Etapa: ' + (recurso.etapa || 'Sin especificar');
+
+      const descripcion = document.createElement('p');
+      descripcion.className = 'descripcion';
+      descripcion.textContent = recurso.descripcion || 'Explora este recurso educativo en YouTube.';
+
+      const boton = document.createElement('a');
+      boton.className = 'boton';
+      boton.textContent = 'Ver en YouTube ↗';
+      boton.href = enlaceSeguro(recurso.enlace) || '#';
+      boton.target = '_blank';
+      boton.rel = 'noopener noreferrer';
+
+      if (!enlaceSeguro(recurso.enlace)) {
+        boton.removeAttribute('href');
+        boton.textContent = 'Enlace no disponible';
+        boton.setAttribute('aria-disabled', 'true');
+      }
+
+      contenido.append(
+        categoriaTexto,
+        titulo,
+        etapas,
+        descripcion,
+        boton
+      );
+
+      tarjeta.append(visual, contenido);
+
+      return tarjeta;
+    }
+
+    function prepararCategorias() {
+      const categorias = new Map();
+
+      recursos.forEach(recurso => {
+        String(recurso.categoria || '')
+          .split(',')
+          .map(valor => valor.trim())
+          .filter(Boolean)
+          .forEach(valor => {
+            const clave = normalizar(valor);
+            if (!categorias.has(clave)) {
+              categorias.set(clave, valor);
+            }
+          });
+      });
+
+      [...categorias.values()]
+        .sort((a, b) => a.localeCompare(b, 'es'))
+        .forEach(valor => {
+          const opcion = document.createElement('option');
+          opcion.value = valor;
+          opcion.textContent = valor;
+          categoria.appendChild(opcion);
+        });
+    }
+
+    function mostrarRecursos() {
+      const texto = normalizar(busqueda.value);
+      const categoriaElegida = normalizar(categoria.value);
+      const etapaElegida = normalizar(etapa.value);
+
+      const filtrados = recursos.filter(recurso => {
+        const contenido = normalizar([
+          recurso.titulo,
+          recurso.categoria,
+          recurso.etapa,
+          recurso.descripcion
+        ].join(' '));
+
+        const coincideBusqueda = contenido.includes(texto);
+
+        const coincideCategoria =
+          !categoriaElegida ||
+          separar(recurso.categoria).includes(categoriaElegida);
+
+        const etapasRecurso = separar(recurso.etapa);
+
+        const coincideEtapa =
+          !etapaElegida ||
+          etapasRecurso.includes('todas') ||
+          etapasRecurso.includes(etapaElegida);
+
+        return coincideBusqueda && coincideCategoria && coincideEtapa;
+      });
+
+      resultados.replaceChildren();
+
+      contador.textContent =
+        filtrados.length === 1
+          ? '1 recurso encontrado'
+          : filtrados.length + ' recursos encontrados';
+
+      if (!filtrados.length) {
+        const aviso = document.createElement('div');
+        aviso.className = 'estado';
+        aviso.textContent =
+          'No encontramos recursos con esos filtros. Prueba otra búsqueda.';
+        resultados.appendChild(aviso);
+        return;
+      }
+
+      filtrados.forEach(recurso => {
+        resultados.appendChild(crearTarjeta(recurso));
+      });
+    }
+
+    busqueda.addEventListener('input', mostrarRecursos);
+    categoria.addEventListener('change', mostrarRecursos);
+    etapa.addEventListener('change', mostrarRecursos);
+
+    fetch('./recursos.json', { cache: 'no-store' })
+      .then(respuesta => {
+        if (!respuesta.ok) throw new Error('No se pudo cargar el catálogo');
+        return respuesta.json();
+      })
+      .then(datos => {
+        recursos = Array.isArray(datos) ? datos : [];
+        prepararCategorias();
+        mostrarRecursos();
+      })
+      .catch(error => {
+        contador.textContent = 'No se pudieron cargar los recursos.';
+        resultados.replaceChildren();
+        const aviso = document.createElement('div');
+        aviso.className = 'estado';
+        aviso.textContent = 'No se pudo conectar con el catálogo de la videoteca.';
+        resultados.appendChild(aviso);
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
