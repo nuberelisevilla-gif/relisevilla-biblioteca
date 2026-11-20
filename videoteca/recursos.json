@@ -1,0 +1,51 @@
+[
+  {
+    "titulo": "Videotutoriales de Relisevilla",
+    "categoria": "Videotutoriales docentes",
+    "etapa": "Docentes",
+    "descripcion": "Tutoriales prácticos sobre herramientas digitales y recursos TIC para el profesorado de Religión.",
+    "enlace": "https://youtube.com/playlist?list=PLEY_HnWO9KkBohnobxgQHB9NUiqMnJKOG&si=kyYnC-PVJSDjncDS"
+  },
+  {
+    "titulo": "Videotutoriales de otros docentes",
+    "categoria": "Videotutoriales docentes",
+    "etapa": "Docentes",
+    "descripcion": "Tutoriales prácticos sobre herramientas digitales y recursos TIC para el profesorado de Religión.",
+    "enlace": "https://youtube.com/playlist?list=PLEY_HnWO9KkAczDlf5ybQaNcnsVVL2WKw&si=6nkDF_C1_TZ_npB-"
+  },
+  {
+    "titulo": "Historias de Superlibro",
+    "categoria": "Biblia y Jesús",
+    "etapa": "Primaria",
+    "descripcion": "Historias de Superlibro",
+    "enlace": "https://www.youtube.com/@Superlibrola/videos"
+  },
+  {
+    "titulo": "Historias de Pequeños Héroes",
+    "categoria": "Biblia y Jesús",
+    "etapa": "Infantil",
+    "descripcion": "Historias de Pequeños Héroes",
+    "enlace": "https://www.youtube.com/@Peque%C3%B1osheroestv"
+  },
+  {
+    "titulo": "Parábolas e historias de Valivan",
+    "categoria": "Biblia y Jesús",
+    "etapa": "Infantil, Primaria",
+    "descripcion": "Historias y canciones de Valivan",
+    "enlace": "https://www.youtube.com/@valivanmta"
+  },
+  {
+    "titulo": "Catequizis",
+    "categoria": "Biblia y Jesús",
+    "etapa": "infantil, Primaria",
+    "descripcion": "Explicaciones de la mano de Juan Manuel Cotelo",
+    "enlace": "https://youtube.com/playlist?list=PLUppYfbeQBT3jLzEFvODCyulsO2dUpqOM&si=eDJcn0MF0J63JP4x"
+  },
+  {
+    "titulo": "Canciones de Navidad",
+    "categoria": "Música",
+    "etapa": "Docentes",
+    "descripcion": "Canciones de Navidad",
+    "enlace": "https://youtube.com/playlist?list=PLdPEYm8vjthw&si=5PevirMKpSKeD0Fv"
+  }
+]
