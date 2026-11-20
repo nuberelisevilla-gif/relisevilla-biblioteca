@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <base target="_blank">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --azul-oscuro: #15384e;
+      --azul: #28617c;
+      --azul-claro: #eaf3f8;
+      --fondo: #f5f8fb;
+      --texto: #243746;
+      --gris: #6c7e8c;
+      --borde: #e0e9f0;
+      --dorado: #d5a94e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    button, input { font: inherit; }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--dorado);
+      outline-offset: 3px;
+    }
+
+    .biblioteca {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 18px 55px;
+    }
+
+    .hero {
+      background: linear-gradient(125deg,#15384e,#28617c);
+      color: white;
+      border-radius: 20px;
+      padding: 43px 6%;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border: 35px solid rgba(255,255,255,.06);
+      border-radius: 50%;
+      right: -70px;
+      top: -95px;
+      pointer-events: none;
+    }
+
+    .hero small {
+      display: block;
+      color: #e8d39d;
+      letter-spacing: 1.7px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(27px,4vw,42px);
+      line-height: 1.2;
+      margin: 13px 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      color: #e5eff5;
+    }
+
+    .busqueda {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+
+    .busqueda h2 {
+      margin: 0 0 5px;
+      font-size: 19px;
+      color: var(--azul-oscuro);
+    }
+
+    .busqueda p {
+      color: var(--gris);
+      font-size: 14px;
+      margin: 0 0 14px;
+    }
+
+    #buscar {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #cddce7;
+      border-radius: 11px;
+      background: #fbfdff;
+      font-size: 16px;
+    }
+
+    .categorias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 18px 0 27px;
+    }
+
+    .categoria {
+      background: white;
+      border: 1px solid #d4e1e9;
+      color: var(--azul);
+      border-radius: 25px;
+      padding: 10px 15px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .categoria:hover { background: var(--azul-claro); }
+
+    .categoria.activa {
+      background: var(--azul);
+      color: white;
+      border-color: var(--azul);
+    }
+
+    .barra {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .barra h2 {
+      font-size: 22px;
+      margin: 0;
+      color: var(--azul-oscuro);
+    }
+
+    .contador {
+      background: #e8f0f6;
+      color: var(--azul);
+      border-radius: 25px;
+      padding: 7px 13px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .documentos {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .tarjeta {
+      min-width: 0;
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(20,55,78,.035);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 24px rgba(20,55,78,.10);
+    }
+
+    .portada {
+      width: 100%;
+      height: 180px;
+      background: #f2f5f8;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .portada img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .portada.sin-imagen {
+      color: var(--azul);
+      font-size: 42px;
+    }
+
+    .etiqueta {
+      font-size: 11px;
+      color: var(--azul);
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: .4px;
+    }
+
+    .titulo {
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: bold;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .ruta {
+      font-size: 12px;
+      color: var(--gris);
+      overflow-wrap: anywhere;
+    }
+
+    .enlace {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      background: var(--azul-claro);
+      color: var(--azul-oscuro);
+      padding: 11px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: auto;
+    }
+
+    .enlace:hover {
+      background: var(--azul);
+      color: white;
+    }
+
+    .estado {
+      text-align: center;
+      padding: 30px;
+      color: var(--gris);
+    }
+
+    .estado:empty { display: none; }
+
+    .pie {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--borde);
+      color: var(--gris);
+      font-size: 13px;
+    }
+
+    @media(max-width:850px) {
+      .documentos {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media(max-width:520px) {
+      .documentos {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .biblioteca { padding: 12px; }
+      .hero { padding: 30px 23px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="biblioteca">
+
+    <header class="hero">
+      <small>RELISEVILLA · Recursos para docentes</small>
+      <h1>Biblioteca de lecturas y documentación docente</h1>
+      <p>
+        Consulta artículos, lecturas, análisis curriculares,
+        normativa educativa y documentación de interés
+        para el profesorado de Religión Católica.
+      </p>
+    </header>
+
+    <section class="busqueda">
+      <h2>¿Qué documento necesitas?</h2>
+      <p>Busca por título o explora nuestras categorías.</p>
+      <input
+        id="buscar"
+        type="search"
+        placeholder="Buscar currículo, normativa, artículos..."
+        aria-label="Buscar documentos"
+      >
+    </section>
+
+    <nav id="categorias" class="categorias"
+         aria-label="Categorías de documentos"></nav>
+
+    <div class="barra">
+      <h2>Documentos y publicaciones</h2>
+      <span id="contador" class="contador"></span>
+    </div>
+
+    <div id="estado" class="estado" role="status">
+      Cargando documentos...
+    </div>
+
+    <section id="documentos" class="documentos"></section>
+
+    <footer class="pie">
+      RELISEVILLA · Biblioteca de consulta para
+      el profesorado de Religión Católica
+    </footer>
+
+  </main>
+
+  <script>
+    let documentos = [];
+    let categoriaActual = 'Todos';
+
+    const buscar = document.getElementById('buscar');
+    const categorias = document.getElementById('categorias');
+    const contenedor = document.getElementById('documentos');
+    const contador = document.getElementById('contador');
+    const estado = document.getElementById('estado');
+
+    function crear(tag, clase, texto) {
+      const el = document.createElement(tag);
+      if (clase) el.className = clase;
+      if (texto !== undefined) el.textContent = texto;
+      return el;
+    }
+
+    function normalizar(texto) {
+      return String(texto || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function tituloLimpio(nombre) {
+      return nombre
+        .replace(/\.(pdf|docx?|pptx?|xlsx?|png|jpe?g)$/i, '')
+        .replace(/[_-]+/g, ' ')
+        .trim();
+    }
+
+    function dibujarCategorias() {
+      categorias.replaceChildren();
+
+      const nombres = [
+        'Todos',
+        ...new Set(documentos.map(d => d.categoria))
+      ];
+
+      nombres.forEach(nombre => {
+        const boton = crear('button','categoria',nombre);
+        boton.type = 'button';
+
+        const activa = nombre === categoriaActual;
+        boton.classList.toggle('activa',activa);
+        boton.setAttribute('aria-pressed',String(activa));
+
+        boton.addEventListener('click',() => {
+          categoriaActual = nombre;
+          dibujarCategorias();
+          dibujarDocumentos();
+        });
+
+        categorias.appendChild(boton);
+      });
+    }
+
+    function crearTarjeta(doc) {
+      const tarjeta = crear('article','tarjeta');
+
+      const portada = crear('a','portada');
+      portada.href = doc.url;
+      portada.target = '_blank';
+      portada.rel = 'noopener noreferrer';
+      portada.setAttribute(
+        'aria-label','Abrir ' + doc.nombre
+      );
+
+      const imagen = document.createElement('img');
+      imagen.alt = 'Vista previa de ' + doc.nombre;
+      imagen.loading = 'lazy';
+
+      imagen.onerror = function() {
+        portada.replaceChildren();
+        portada.classList.add('sin-imagen');
+        portada.textContent = '📄';
+      };
+
+      imagen.src =
+        'https://drive.google.com/thumbnail?id=' +
+        encodeURIComponent(doc.id) +
+        '&sz=w500';
+
+      portada.appendChild(imagen);
+
+      const etiqueta = crear(
+        'div','etiqueta',doc.categoria
+      );
+
+      const titulo = crear(
+        'h3','titulo',tituloLimpio(doc.nombre)
+      );
+
+      const ruta = crear(
+        'div','ruta',doc.ruta || 'Lecturas'
+      );
+
+      const enlace = crear(
+        'a','enlace','Consultar documento ↗'
+      );
+
+      enlace.href = doc.url;
+      enlace.target = '_blank';
+      enlace.rel = 'noopener noreferrer';
+
+      tarjeta.append(portada,etiqueta,titulo,ruta,enlace);
+      return tarjeta;
+    }
+
+    function dibujarDocumentos() {
+      const texto = normalizar(buscar.value.trim());
+
+      const filtrados = documentos.filter(doc => {
+        const categoriaOk =
+          categoriaActual === 'Todos' ||
+          doc.categoria === categoriaActual;
+
+        const contenido = normalizar(
+          doc.nombre + ' ' +
+          doc.categoria + ' ' +
+          doc.ruta
+        );
+
+        return categoriaOk && contenido.includes(texto);
+      });
+
+      contenedor.replaceChildren();
+      contador.textContent = filtrados.length + ' documentos';
+
+      estado.textContent = filtrados.length
+        ? ''
+        : 'No hay documentos que coincidan con tu búsqueda.';
+
+      filtrados.forEach(doc => {
+        contenedor.appendChild(crearTarjeta(doc));
+      });
+    }
+
+    buscar.addEventListener('input',dibujarDocumentos);
+
+    // Catálogo público generado desde Drive y publicado en GitHub.
+    // Este archivo se aloja en /lecturas/index.html.
+    fetch('./recursos.json', { cache: 'no-cache' })
+      .then(respuesta => {
+        if (!respuesta.ok) {
+          throw new Error('Catálogo no disponible (' + respuesta.status + ')');
+        }
+        return respuesta.json();
+      })
+      .then(datos => {
+        if (!Array.isArray(datos)) {
+          throw new Error('El catálogo no tiene el formato esperado.');
+        }
+        documentos = datos;
+        estado.textContent = '';
+        dibujarCategorias();
+        dibujarDocumentos();
+      })
+      .catch(error => {
+        estado.textContent =
+          'Todavía no se han podido cargar las lecturas. ' +
+          'Estamos preparando el catálogo. ' + error.message;
+      });
+  </script>
+</body>
+</html>
