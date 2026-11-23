@@ -9,10 +9,19 @@
     },
     {
       "nombre": "@belen_reli",
-      "instagram": "",
-      "blog": "",
+      "instagram": "https://www.instagram.com/belen_reli/",
+      "blog": "https://chat.whatsapp.com/Gvc0Q7soI0KHoi3Z1CvRvq?s=cl&p=i&iam=2",
       "avatar": "https://drive.google.com/thumbnail?id=1hf6gSpHW1ZTq-UxngCZ6lcQvlFhZEOeH&sz=w400",
       "materiales": [
+        {
+          "nombre": "Scape room navidad.pdf",
+          "url": "https://drive.google.com/file/d/1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795468863030,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
         {
           "nombre": "Dossier Navidad.pdf",
           "url": "https://drive.google.com/file/d/18oPvELdcTQ6jNPz2HrVjCzSaseP-TAFV/view?usp=drivesdk",
@@ -33,14 +42,14 @@
     },
     {
       "nombre": "@profereli94",
-      "instagram": "",
+      "instagram": "https://www.instagram.com/profereli94/",
       "blog": "https://sites.google.com/view/blogdelaclasedeprofereli94/",
       "avatar": "https://drive.google.com/thumbnail?id=1Ak0-I5xtahuJarVvcCxj2kVLkQWjK6Yd&sz=w400",
       "materiales": []
     },
     {
       "nombre": "@reyes_de_reli",
-      "instagram": "",
+      "instagram": "https://www.instagram.com/reyes_de_reli/",
       "blog": "",
       "avatar": "https://drive.google.com/thumbnail?id=1ZLKrvYnoFotin2XbFoszBo-YisRE_fF4&sz=w400",
       "materiales": [
@@ -283,7 +292,7 @@
     {
       "nombre": "@welenyreli",
       "instagram": "https://www.instagram.com/welenyreli/",
-      "blog": "",
+      "blog": "https://sites.google.com/view/welenyreli/recursos-para-profes?authuser=0",
       "avatar": "https://drive.google.com/thumbnail?id=1uT-aro4agnP0gidR3Zp7glJ-yE6rvsQa&sz=w400",
       "materiales": [
         {
@@ -300,6 +309,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Scape room navidad.pdf",
+      "url": "https://drive.google.com/file/d/1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795468863030,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@belen_reli",
+      "instagram": "https://www.instagram.com/belen_reli/"
+    },
+    {
       "nombre": "2.png",
       "url": "https://drive.google.com/file/d/1uN-Wo205H16qFkqxpk4iZhez0mAU4ePi/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1uN-Wo205H16qFkqxpk4iZhez0mAU4ePi&sz=w700",
@@ -308,7 +328,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "6.png",
@@ -319,7 +339,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "7.png",
@@ -330,7 +350,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "1.png",
@@ -341,7 +361,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "3.png",
@@ -352,7 +372,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "5.png",
@@ -363,7 +383,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "4.png",
@@ -374,7 +394,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "Sobre.png",
@@ -385,7 +405,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "Dossier Navidad.pdf",
@@ -396,7 +416,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@belen_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/belen_reli/"
     },
     {
       "nombre": "3.png",
@@ -407,7 +427,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     },
     {
       "nombre": "2.png",
@@ -418,18 +438,7 @@
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
-      "instagram": ""
-    },
-    {
-      "nombre": "6.png",
-      "url": "https://drive.google.com/file/d/1VTakeX9y5ACwEWVqnTbvdxfhbE6GftzA/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1VTakeX9y5ACwEWVqnTbvdxfhbE6GftzA&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468541967,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": ""
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
     }
   ]
 }
