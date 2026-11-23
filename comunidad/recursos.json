@@ -79,6 +79,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1Ak0-I5xtahuJarVvcCxj2kVLkQWjK6Yd&sz=w400",
       "materiales": [
         {
+          "nombre": "TAPETE NAVIDAD 01.pdf",
+          "url": "https://drive.google.com/file/d/1FQ04jGvuREeYt2RlMr2YbSFueMrd_ItO/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1FQ04jGvuREeYt2RlMr2YbSFueMrd_ItO&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795474336898,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Cuento Adviento 2024.pdf",
           "url": "https://drive.google.com/file/d/1WJcHLXW7SwTYnKmsxCWiEEEBxJh7qOIq/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1WJcHLXW7SwTYnKmsxCWiEEEBxJh7qOIq&sz=w700",
@@ -95,15 +104,6 @@
           "fechaOrden": 1795473032113,
           "fecha": "23/11/2026",
           "nuevo": true
-        },
-        {
-          "nombre": "Tapete Navidad.pdf.pdf",
-          "url": "https://drive.google.com/file/d/1ctJAZz71ox6t2OoCEKxmcoVb9RPxzy6g/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1ctJAZz71ox6t2OoCEKxmcoVb9RPxzy6g&sz=w700",
-          "tipo": "application/pdf",
-          "fechaOrden": 1788196601017,
-          "fecha": "31/08/2026",
-          "nuevo": false
         }
       ]
     },
@@ -623,6 +623,17 @@
   ],
   "novedades": [
     {
+      "nombre": "TAPETE NAVIDAD 01.pdf",
+      "url": "https://drive.google.com/file/d/1FQ04jGvuREeYt2RlMr2YbSFueMrd_ItO/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1FQ04jGvuREeYt2RlMr2YbSFueMrd_ItO&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795474336898,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@profereli94",
+      "instagram": "https://www.instagram.com/profereli94/"
+    },
+    {
       "nombre": "Cuento Adviento 2024.pdf",
       "url": "https://drive.google.com/file/d/1WJcHLXW7SwTYnKmsxCWiEEEBxJh7qOIq/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1WJcHLXW7SwTYnKmsxCWiEEEBxJh7qOIq&sz=w700",
@@ -736,17 +747,6 @@
       "nombre": "TARJETAS.pdf",
       "url": "https://drive.google.com/file/d/1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472394219,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "Series Navidad",
-      "url": "https://drive.google.com/file/d/1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472394219,
       "fecha": "23/11/2026",
