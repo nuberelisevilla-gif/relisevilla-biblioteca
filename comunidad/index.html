@@ -56,7 +56,7 @@ function tarjetaColaboradora(c){
   const whatsapp=c.whatsapp?`<a class="instagram" href="${urlSegura(c.whatsapp)}" target="_blank" rel="noopener noreferrer">💬 Unirse al grupo de WhatsApp</a>`:'';
   const lista=Array.isArray(c.materiales)?c.materiales:[];
   const materiales=lista.length?lista.map((r,i)=>`<div class="recurso"${i>=LIMITE_MATERIALES?' hidden':''}><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer">📄 ${escapar(r.nombre)}</a> ${r.nuevo?'<span class="nuevo">NUEVO</span>':''}</div>`).join(''):'<p class="vacio">Próximamente, nuevos recursos.</p>';
-  const boton=lista.length>LIMITE_MATERIALES?`<button class="ver-mas" type="button" aria-expanded="false">Ver más materiales (${lista.length-LIMITE_MATERIALES})</button>`:'';
+  const boton=lista.length>LIMITE_MATERIALES?`<button class="ver-mas" type="button" aria-expanded="false">Mostrar ${Math.min(LIMITE_MATERIALES,lista.length-LIMITE_MATERIALES)} materiales más</button>`:'';
   return `<article class="perfil"><div class="perfil-superior">${avatar}<div><div class="nombre">${escapar(c.nombre)}</div><div class="autor">${lista.length} recursos compartidos</div>${instagram}${blog}${whatsapp}</div></div><div class="lista-materiales">${materiales}</div>${boton}</article>`;
 }
 // Delegación de eventos: funciona con todos los perfiles actuales y futuros.
