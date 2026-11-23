@@ -50,7 +50,26 @@
       "blog": "",
       "whatsapp": "https://chat.whatsapp.com/BjVfCT5qU9N00540AO4ykZ?mode=gi_t",
       "avatar": "https://drive.google.com/thumbnail?id=1NRdZOOGRUbrVqghoUI9Xn_coAcUCxlll&sz=w400",
-      "materiales": []
+      "materiales": [
+        {
+          "nombre": "Coronasadviento.pdf",
+          "url": "https://drive.google.com/file/d/1-q3C5J7oNjW2TONkq_7Nl7oB75rYzNJr/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1-q3C5J7oNjW2TONkq_7Nl7oB75rYzNJr&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795473301950,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "Masterchristmas.pdf",
+          "url": "https://drive.google.com/file/d/1d6jHJD_SoWeAr9nQ0cTcmYV8BaG6VsiD/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1d6jHJD_SoWeAr9nQ0cTcmYV8BaG6VsiD&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795473078940,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        }
+      ]
     },
     {
       "nombre": "@profereli94",
@@ -586,6 +605,28 @@
   ],
   "novedades": [
     {
+      "nombre": "Coronasadviento.pdf",
+      "url": "https://drive.google.com/file/d/1-q3C5J7oNjW2TONkq_7Nl7oB75rYzNJr/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1-q3C5J7oNjW2TONkq_7Nl7oB75rYzNJr&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795473301950,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@maestraarc",
+      "instagram": "https://www.instagram.com/maestraarc/"
+    },
+    {
+      "nombre": "Masterchristmas.pdf",
+      "url": "https://drive.google.com/file/d/1d6jHJD_SoWeAr9nQ0cTcmYV8BaG6VsiD/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1d6jHJD_SoWeAr9nQ0cTcmYV8BaG6VsiD&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795473078940,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@maestraarc",
+      "instagram": "https://www.instagram.com/maestraarc/"
+    },
+    {
       "nombre": "BINGO NAVIDAD.pdf",
       "url": "https://drive.google.com/file/d/1sS943syy0RwErV8BMGaTLGKc0eaaVukQ/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1sS943syy0RwErV8BMGaTLGKc0eaaVukQ&sz=w700",
@@ -688,28 +729,6 @@
       "nombre": "Pesebre que se abre.pdf",
       "url": "https://drive.google.com/file/d/1qYS50U04bCsDx9KSqieCREViuQP5bk_S/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1qYS50U04bCsDx9KSqieCREViuQP5bk_S&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472368814,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "Pasapalabra Navidad.pdf",
-      "url": "https://drive.google.com/file/d/1RReXx2kK4v1FATISqY39VLq9UrJTl_9B/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1RReXx2kK4v1FATISqY39VLq9UrJTl_9B&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472368814,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "Niño Jesús.pdf",
-      "url": "https://drive.google.com/file/d/1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472368814,
       "fecha": "23/11/2026",
