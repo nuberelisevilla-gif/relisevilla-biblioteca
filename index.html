@@ -283,6 +283,16 @@
       color: white;
     }
 
+    /* AUTOR DE LOS MATERIALES COMPARTIDOS */
+    .tarjeta-colaborador {
+      font-size: 12px;
+      color: var(--azul-oscuro);
+      background: var(--azul-claro);
+      border-radius: 8px;
+      padding: 8px 10px;
+      overflow-wrap: anywhere;
+    }
+
     /* MENSAJES */
 
     .estado {
@@ -622,7 +632,18 @@
       enlace.target = '_blank';
       enlace.rel = 'noopener noreferrer';
 
-      tarjeta.append(miniatura, etiqueta, enlace);
+      tarjeta.append(miniatura, etiqueta);
+
+      if (recurso.colaborador) {
+        const autor = crearElemento(
+          'div',
+          'tarjeta-colaborador',
+          '👤 Compartido por ' + recurso.colaborador
+        );
+        tarjeta.appendChild(autor);
+      }
+
+      tarjeta.appendChild(enlace);
 
       return tarjeta;
     }
