@@ -14,6 +14,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1hf6gSpHW1ZTq-UxngCZ6lcQvlFhZEOeH&sz=w400",
       "materiales": [
         {
+          "nombre": "MasterChrist.pdf",
+          "url": "https://drive.google.com/file/d/1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795469178222,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Scape room navidad.pdf",
           "url": "https://drive.google.com/file/d/1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm&sz=w700",
@@ -309,6 +318,17 @@
   ],
   "novedades": [
     {
+      "nombre": "MasterChrist.pdf",
+      "url": "https://drive.google.com/file/d/1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795469178222,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@belen_reli",
+      "instagram": "https://www.instagram.com/belen_reli/"
+    },
+    {
       "nombre": "Scape room navidad.pdf",
       "url": "https://drive.google.com/file/d/1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1z4a5-cI5UAL5UB5xV_BhiG1Ras6R2jjm&sz=w700",
@@ -424,17 +444,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1FA-VROzNWW0ZC2y0wTrF7OD6c58gFJT9&sz=w700",
       "tipo": "image/png",
       "fechaOrden": 1795468546791,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "2.png",
-      "url": "https://drive.google.com/file/d/1LtVduYZaQLpdxHpvHJcCkAvgMjKkmYeh/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1LtVduYZaQLpdxHpvHJcCkAvgMjKkmYeh&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468544400,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
