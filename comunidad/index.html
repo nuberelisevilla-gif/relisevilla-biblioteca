@@ -9,6 +9,22 @@
 /* Mostrar inicialmente seis materiales por colaborador */
 .recurso[hidden]{display:none!important}.ver-mas{display:block;width:100%;margin-top:15px;padding:11px 13px;border:1px solid #bfd5e5;border-radius:10px;background:#eaf3f8;color:#15384e;font-size:13px;font-weight:bold;cursor:pointer;transition:background .2s,border-color .2s}.ver-mas:hover{background:#dbeaf4;border-color:#28617c}
 @media(max-width:700px){.grid-novedades{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid-novedades .imagen{height:145px}}@media(max-width:600px){body{padding:10px}.cabecera{padding:28px 20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.imagen{height:120px}.contenido{padding:12px}.perfil{padding:15px}.perfil-superior{flex-wrap:wrap}.titulo{font-size:14px}}@media(max-width:390px){.grid{grid-template-columns:1fr}}
+/* Icono cuando no hay miniatura disponible */
+.grid-novedades .imagen {
+  position: relative;
+}
+
+.grid-novedades .imagen::before {
+  content: "📄";
+  position: absolute;
+  font-size: 45px;
+}
+
+.grid-novedades .imagen img {
+  position: relative;
+  z-index: 1;
+  background: #eaf1f8;
+}
 </style>
 </head>
 <body>
@@ -24,7 +40,14 @@
 const LIMITE_MATERIALES=6;
 function escapar(valor){return String(valor??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function urlSegura(valor){try{const u=new URL(valor);return ['https:','http:'].includes(u.protocol)?escapar(u.href):'#';}catch(e){return '#';}}
-function imagenHTML(url,clase,alternativo){return url?`<img src="${urlSegura(url)}" class="${escapar(clase)}" alt="${escapar(alternativo)}" loading="lazy" onerror="this.style.display='none'">`:'';}
+function imagenHTML(url,clase,alternativo){ return url
+    ? `<img src="${urlSegura(url)}"
+         class="${escapar(clase)}"
+         alt="${escapar(alternativo)}"
+         loading="lazy"
+         onerror="this.remove()">`
+    : '';
+}
 function tarjetaRecurso(r){const imagen=r.miniatura?imagenHTML(r.miniatura,'',r.nombre):'<span aria-hidden="true">📄</span>';const autora=r.instagram?`<a href="${urlSegura(r.instagram)}" target="_blank" rel="noopener noreferrer">${escapar(r.autora)}</a>`:escapar(r.autora);return `<article class="tarjeta"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${escapar(r.nombre)}"><div class="imagen">${imagen}</div></a><div class="contenido">${r.nuevo?'<span class="nuevo">NUEVO</span>':''}<div class="titulo"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer">${escapar(r.nombre)}</a></div><div class="autor">Compartido por ${autora}</div><div class="fecha">${escapar(r.fecha)}</div></div></article>`;}
 function tarjetaColaboradora(c){
   const avatar=c.avatar?imagenHTML(c.avatar,'avatar',c.nombre):'<div class="avatar avatar-vacio">✦</div>';
