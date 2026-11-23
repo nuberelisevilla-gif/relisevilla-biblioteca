@@ -60,20 +60,57 @@ function tarjetaColaboradora(c){
   return `<article class="perfil"><div class="perfil-superior">${avatar}<div><div class="nombre">${escapar(c.nombre)}</div><div class="autor">${lista.length} recursos compartidos</div>${instagram}${blog}${whatsapp}</div></div><div class="lista-materiales">${materiales}</div>${boton}</article>`;
 }
 // Delegación de eventos: funciona con todos los perfiles actuales y futuros.
-document.getElementById('colaboradoras').addEventListener('click',function(event){
-  const boton=event.target.closest('.ver-mas');
-  if(!boton)return;
-  const perfil=boton.closest('.perfil');
-  const ampliado=boton.getAttribute('aria-expanded')==='true';
-  const ocultos=perfil.querySelectorAll('.lista-materiales .recurso');
-  ocultos.forEach((recurso,i)=>{recurso.hidden=ampliado&&i>=LIMITE_MATERIALES;});
-  boton.setAttribute('aria-expanded',String(!ampliado));
-  if(ampliado){
-    boton.textContent='Ver más materiales ('+(ocultos.length-LIMITE_MATERIALES)+')';
-  }else{
-    boton.textContent='Ver menos materiales';
+
+ // Mostrar materiales progresivamente, de 6 en 6.
+document.getElementById('colaboradoras').addEventListener('click', function(event) {
+  const boton = event.target.closest('.ver-mas');
+  if (!boton) return;
+
+  const perfil = boton.closest('.perfil');
+  const recursos = Array.from(
+    perfil.querySelectorAll('.lista-materiales .recurso')
+  );
+
+  const visibles = recursos.filter(r => !r.hidden).length;
+  const nuevosVisibles = Math.min(
+    visibles + LIMITE_MATERIALES,
+    recursos.length
+  );
+
+  recursos.forEach((recurso, i) => {
+    recurso.hidden = i >= nuevosVisibles;
+  });
+
+  const restantes = recursos.length - nuevosVisibles;
+
+  if (restantes > 0) {
+    boton.textContent =
+      'Mostrar ' + Math.min(LIMITE_MATERIALES, restantes) +
+      ' materiales más (' + restantes + ' pendientes)';
+  } else {
+    boton.textContent = 'Ver menos materiales';
+    boton.dataset.completo = 'true';
   }
+
+  if (boton.dataset.completo === 'true' && visibles === recursos.length) {
+    recursos.forEach((recurso, i) => {
+      recurso.hidden = i >= LIMITE_MATERIALES;
+    });
+
+    boton.textContent =
+      'Mostrar ' +
+      Math.min(LIMITE_MATERIALES, recursos.length - LIMITE_MATERIALES) +
+      ' materiales más';
+
+    boton.dataset.completo = 'false';
+  }
+
+  boton.setAttribute(
+    'aria-expanded',
+    String(nuevosVisibles > LIMITE_MATERIALES)
+  );
 });
+
 async function cargarComunidad(){const estado=document.getElementById('estado');try{const respuesta=await fetch('./recursos.json',{cache:'no-store'});if(!respuesta.ok)throw new Error('El catálogo aún no está disponible ('+respuesta.status+').');const datos=await respuesta.json();if(!Array.isArray(datos.novedades)||!Array.isArray(datos.colaboradoras))throw new Error('El catálogo no tiene el formato esperado.');document.getElementById('novedades').innerHTML=datos.novedades.length?datos.novedades.map(tarjetaRecurso).join(''):'<p class="vacio">Próximamente, nuevos recursos.</p>';document.getElementById('colaboradoras').innerHTML=datos.colaboradoras.length?datos.colaboradoras.map(tarjetaColaboradora).join(''):'<p class="vacio">Próximamente conocerás a nuestros colaboradores.</p>';estado.textContent='';}catch(error){estado.textContent='No se ha podido cargar la comunidad docente. '+error.message;}}
 cargarComunidad();
 </script>
