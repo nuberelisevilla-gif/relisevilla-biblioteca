@@ -25,6 +25,30 @@
   z-index: 1;
   background: #eaf1f8;
 }
+  
+/* Buscador de materiales por colaborador */
+.buscador-materiales {
+  width: 100%;
+  margin: 12px 0;
+  padding: 11px 13px;
+  border: 1px solid #bfd5e5;
+  border-radius: 10px;
+  background: #f5f9fd;
+  color: #20384f;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.buscador-materiales:focus {
+  outline: 2px solid #2876a5;
+  outline-offset: 2px;
+}
+
+.sin-resultados {
+  padding: 12px 0;
+  color: #65798b;
+  font-size: 13px;
+}
 </style>
 </head>
 <body>
@@ -49,52 +73,101 @@ function imagenHTML(url,clase,alternativo){ return url
     : '';
 }
 function tarjetaRecurso(r){const imagen=r.miniatura?imagenHTML(r.miniatura,'',r.nombre):'<span aria-hidden="true">📄</span>';const autora=r.instagram?`<a href="${urlSegura(r.instagram)}" target="_blank" rel="noopener noreferrer">${escapar(r.autora)}</a>`:escapar(r.autora);return `<article class="tarjeta"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${escapar(r.nombre)}"><div class="imagen">${imagen}</div></a><div class="contenido">${r.nuevo?'<span class="nuevo">NUEVO</span>':''}<div class="titulo"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer">${escapar(r.nombre)}</a></div><div class="autor">Compartido por ${autora}</div><div class="fecha">${escapar(r.fecha)}</div></div></article>`;}
-function tarjetaColaboradora(c){
-  const avatar=c.avatar?imagenHTML(c.avatar,'avatar',c.nombre):'<div class="avatar avatar-vacio">✦</div>';
-  const instagram=c.instagram?`<a class="instagram" href="${urlSegura(c.instagram)}" target="_blank" rel="noopener noreferrer">📸 Visitar Instagram</a>`:'';
-  const blog=c.blog?`<a class="instagram" href="${urlSegura(c.blog)}" target="_blank" rel="noopener noreferrer">🌐 Visitar blog</a>`:'';
-  const whatsapp=c.whatsapp?`<a class="instagram" href="${urlSegura(c.whatsapp)}" target="_blank" rel="noopener noreferrer">💬 Unirse al grupo de WhatsApp</a>`:'';
-  const lista=Array.isArray(c.materiales)?c.materiales:[];
-  const materiales=lista.length?lista.map((r,i)=>`<div class="recurso"${i>=LIMITE_MATERIALES?' hidden':''}><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer">📄 ${escapar(r.nombre)}</a> ${r.nuevo?'<span class="nuevo">NUEVO</span>':''}</div>`).join(''):'<p class="vacio">Próximamente, nuevos recursos.</p>';
-  const boton=lista.length>LIMITE_MATERIALES?`<button class="ver-mas" type="button" aria-expanded="false">Mostrar ${Math.min(LIMITE_MATERIALES,lista.length-LIMITE_MATERIALES)} materiales más</button>`:'';
-  return `<article class="perfil"><div class="perfil-superior">${avatar}<div><div class="nombre">${escapar(c.nombre)}</div><div class="autor">${lista.length} recursos compartidos</div>${instagram}${blog}${whatsapp}</div></div><div class="lista-materiales">${materiales}</div>${boton}</article>`;
+function tarjetaColaboradora(c)
+function tarjetaColaboradora(c) {
+  const avatar = c.avatar
+    ? imagenHTML(c.avatar, 'avatar', c.nombre)
+    : '<div class="avatar avatar-vacio">✦</div>';
+
+  const instagram = c.instagram
+    ? `<a class="instagram" href="${urlSegura(c.instagram)}" target="_blank" rel="noopener noreferrer">📸 Visitar Instagram</a>`
+    : '';
+
+  const blog = c.blog
+    ? `<a class="instagram" href="${urlSegura(c.blog)}" target="_blank" rel="noopener noreferrer">🌐 Visitar blog</a>`
+    : '';
+
+  const whatsapp = c.whatsapp
+    ? `<a class="instagram" href="${urlSegura(c.whatsapp)}" target="_blank" rel="noopener noreferrer">💬 Unirse al grupo de WhatsApp</a>`
+    : '';
+
+  const lista = Array.isArray(c.materiales) ? c.materiales : [];
+
+  const buscador = lista.length >= 18
+    ? `<input
+        type="search"
+        class="buscador-materiales"
+        placeholder="🔎 Buscar entre ${lista.length} materiales..."
+        aria-label="Buscar materiales de ${escapar(c.nombre)}">`
+    : '';
+
+  const materiales = lista.length
+    ? lista.map((r, i) => `
+        <div class="recurso" ${i >= LIMITE_MATERIALES ? 'hidden' : ''}>
+          <a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer">
+            📄 ${escapar(r.nombre)}
+          </a>
+          ${r.nuevo ? '<span class="nuevo">NUEVO</span>' : ''}
+        </div>
+      `).join('')
+    : '<p class="vacio">Próximamente, nuevos recursos.</p>';
+
+  const restantes = lista.length - LIMITE_MATERIALES;
+
+  const boton = restantes > 0
+    ? `<button class="ver-mas" type="button" aria-expanded="false">
+         Mostrar ${Math.min(LIMITE_MATERIALES, restantes)} materiales más
+       </button>`
+    : '';
+
+  return `
+    <article class="perfil">
+      <div class="perfil-superior">
+        ${avatar}
+        <div>
+          <div class="nombre">${escapar(c.nombre)}</div>
+          <div class="autor">${lista.length} recursos compartidos</div>
+          ${instagram}${blog}${whatsapp}
+        </div>
+      </div>
+
+      ${buscador}
+
+      <div class="lista-materiales">${materiales}</div>
+      <p class="sin-resultados" hidden>No se encontraron materiales.</p>
+      ${boton}
+    </article>
+  `;
 }
+
 // Delegación de eventos: funciona con todos los perfiles actuales y futuros.
 
  // Mostrar materiales progresivamente, de 6 en 6.
-document.getElementById('colaboradoras').addEventListener('click', function(event) {
+
+const contenedorColaboradores =
+  document.getElementById('colaboradoras');
+
+// Mostrar materiales de 6 en 6.
+contenedorColaboradores.addEventListener('click', function(event) {
   const boton = event.target.closest('.ver-mas');
   if (!boton) return;
 
   const perfil = boton.closest('.perfil');
+  const buscador = perfil.querySelector('.buscador-materiales');
+
+  // No modificar la paginación durante una búsqueda.
+  if (buscador && buscador.value.trim()) return;
+
   const recursos = Array.from(
     perfil.querySelectorAll('.lista-materiales .recurso')
   );
 
   const visibles = recursos.filter(r => !r.hidden).length;
-  const nuevosVisibles = Math.min(
-    visibles + LIMITE_MATERIALES,
-    recursos.length
-  );
 
-  recursos.forEach((recurso, i) => {
-    recurso.hidden = i >= nuevosVisibles;
-  });
-
-  const restantes = recursos.length - nuevosVisibles;
-
-  if (restantes > 0) {
-    boton.textContent =
-      'Mostrar ' + Math.min(LIMITE_MATERIALES, restantes) +
-      ' materiales más (' + restantes + ' pendientes)';
-  } else {
-    boton.textContent = 'Ver menos materiales';
-    boton.dataset.completo = 'true';
-  }
-
-  if (boton.dataset.completo === 'true' && visibles === recursos.length) {
-    recursos.forEach((recurso, i) => {
-      recurso.hidden = i >= LIMITE_MATERIALES;
+  // Si ya están todos visibles, volver a los seis primeros.
+  if (visibles === recursos.length) {
+    recursos.forEach((r, i) => {
+      r.hidden = i >= LIMITE_MATERIALES;
     });
 
     boton.textContent =
@@ -102,14 +175,79 @@ document.getElementById('colaboradoras').addEventListener('click', function(even
       Math.min(LIMITE_MATERIALES, recursos.length - LIMITE_MATERIALES) +
       ' materiales más';
 
-    boton.dataset.completo = 'false';
+    boton.setAttribute('aria-expanded', 'false');
+    return;
   }
 
-  boton.setAttribute(
-    'aria-expanded',
-    String(nuevosVisibles > LIMITE_MATERIALES)
+  const siguiente = Math.min(
+    visibles + LIMITE_MATERIALES,
+    recursos.length
   );
+
+  recursos.forEach((r, i) => {
+    r.hidden = i >= siguiente;
+  });
+
+  const restantes = recursos.length - siguiente;
+
+  boton.textContent = restantes > 0
+    ? 'Mostrar ' + Math.min(LIMITE_MATERIALES, restantes) +
+      ' materiales más'
+    : 'Ver menos materiales';
+
+  boton.setAttribute('aria-expanded', 'true');
 });
+
+// Buscar dentro de los materiales de cada colaborador.
+contenedorColaboradores.addEventListener('input', function(event) {
+  if (!event.target.matches('.buscador-materiales')) return;
+
+  const buscador = event.target;
+  const perfil = buscador.closest('.perfil');
+  const texto = buscador.value.trim().toLocaleLowerCase('es');
+
+  const recursos = Array.from(
+    perfil.querySelectorAll('.lista-materiales .recurso')
+  );
+
+  const boton = perfil.querySelector('.ver-mas');
+  const aviso = perfil.querySelector('.sin-resultados');
+
+  if (!texto) {
+    // Restaurar la vista inicial de seis materiales.
+    recursos.forEach((r, i) => {
+      r.hidden = i >= LIMITE_MATERIALES;
+    });
+
+    aviso.hidden = true;
+
+    if (boton) {
+      boton.hidden = false;
+      boton.textContent =
+        'Mostrar ' +
+        Math.min(LIMITE_MATERIALES, recursos.length - LIMITE_MATERIALES) +
+        ' materiales más';
+      boton.setAttribute('aria-expanded', 'false');
+    }
+    return;
+  }
+
+  let encontrados = 0;
+
+  recursos.forEach(r => {
+    const nombre = r.querySelector('a')?.textContent || '';
+    const coincide = nombre.toLocaleLowerCase('es').includes(texto);
+
+    r.hidden = !coincide;
+    if (coincide) encontrados++;
+  });
+
+  aviso.hidden = encontrados > 0;
+
+  // Mientras se busca, ocultamos el botón de paginación.
+  if (boton) boton.hidden = true;
+});
+
 
 async function cargarComunidad(){const estado=document.getElementById('estado');try{const respuesta=await fetch('./recursos.json',{cache:'no-store'});if(!respuesta.ok)throw new Error('El catálogo aún no está disponible ('+respuesta.status+').');const datos=await respuesta.json();if(!Array.isArray(datos.novedades)||!Array.isArray(datos.colaboradoras))throw new Error('El catálogo no tiene el formato esperado.');document.getElementById('novedades').innerHTML=datos.novedades.length?datos.novedades.map(tarjetaRecurso).join(''):'<p class="vacio">Próximamente, nuevos recursos.</p>';document.getElementById('colaboradoras').innerHTML=datos.colaboradoras.length?datos.colaboradoras.map(tarjetaColaboradora).join(''):'<p class="vacio">Próximamente conocerás a nuestros colaboradores.</p>';estado.textContent='';}catch(error){estado.textContent='No se ha podido cargar la comunidad docente. '+error.message;}}
 cargarComunidad();
