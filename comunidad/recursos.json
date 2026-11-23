@@ -46,7 +46,7 @@
     },
     {
       "nombre": "@maestraarc",
-      "instagram": "",
+      "instagram": "https://www.instagram.com/maestraarc/",
       "blog": "",
       "whatsapp": "",
       "avatar": "https://drive.google.com/thumbnail?id=1NRdZOOGRUbrVqghoUI9Xn_coAcUCxlll&sz=w400",
@@ -122,6 +122,33 @@
       "avatar": "https://drive.google.com/thumbnail?id=1uT-aro4agnP0gidR3Zp7glJ-yE6rvsQa&sz=w400",
       "materiales": [
         {
+          "nombre": "Copia de PUZZLE Navideño ",
+          "url": "https://drive.google.com/file/d/1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795472476395,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "Copia de puzzle navidad 2",
+          "url": "https://drive.google.com/file/d/1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795472468360,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "Copia de puzles Navidad.pdf",
+          "url": "https://drive.google.com/file/d/1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795472460802,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Copia de LINCES.pdf",
           "url": "https://drive.google.com/file/d/11G5h3iKkIpWj0J9TFK2ohOpASt-0nJzZ/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=11G5h3iKkIpWj0J9TFK2ohOpASt-0nJzZ&sz=w700",
@@ -140,7 +167,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de CONTEO.pdf",
+          "nombre": "CONTEO.pdf",
           "url": "https://drive.google.com/file/d/1ykeEXVCMM8GkMMlWptPT3kCAOm4VjpAD/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1ykeEXVCMM8GkMMlWptPT3kCAOm4VjpAD&sz=w700",
           "tipo": "application/pdf",
@@ -293,7 +320,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de COLGADORES NAVIDAD ",
+          "nombre": " COLGADORES NAVIDAD ",
           "url": "https://drive.google.com/file/d/1Rml4_WK_Vy0rMJ4B5dUod935iZomq-OS/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1Rml4_WK_Vy0rMJ4B5dUod935iZomq-OS&sz=w700",
           "tipo": "application/pdf",
@@ -302,7 +329,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de CARETAS NAVIDAD.pdf",
+          "nombre": "CARETAS NAVIDAD.pdf",
           "url": "https://drive.google.com/file/d/18T-pQRy0Hpt_RCNFd8jICGqhoaG3k_QI/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=18T-pQRy0Hpt_RCNFd8jICGqhoaG3k_QI&sz=w700",
           "tipo": "application/pdf",
@@ -311,7 +338,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de camellos.pdf",
+          "nombre": "camellos.pdf",
           "url": "https://drive.google.com/file/d/1inV_5ixQ9ZclfqKgG3vNWGHoDYU0zC5V/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1inV_5ixQ9ZclfqKgG3vNWGHoDYU0zC5V&sz=w700",
           "tipo": "application/pdf",
@@ -320,7 +347,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Bolas de Nieve Navidad.pdf",
+          "nombre": "Bolas de Nieve Navidad.pdf",
           "url": "https://drive.google.com/file/d/15N73d4hY6FhrR-JQGLQaUL3i-BhKBnv3/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=15N73d4hY6FhrR-JQGLQaUL3i-BhKBnv3&sz=w700",
           "tipo": "application/pdf",
@@ -329,7 +356,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de BOLA nieve.pdf",
+          "nombre": "BOLA nieve.pdf",
           "url": "https://drive.google.com/file/d/12E8FOS5bZn4lT0yakh7sr2uyh-5dSs_I/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=12E8FOS5bZn4lT0yakh7sr2uyh-5dSs_I&sz=w700",
           "tipo": "application/pdf",
@@ -338,7 +365,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de BOLA NAVIDAD 5 años",
+          "nombre": "BOLA NAVIDAD 5 años",
           "url": "https://drive.google.com/file/d/1gCPPy8C8C0xsfn2Awd2bXwhy1UYzEvff/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1gCPPy8C8C0xsfn2Awd2bXwhy1UYzEvff&sz=w700",
           "tipo": "application/pdf",
@@ -347,7 +374,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Belén montable.pdf",
+          "nombre": "Belén montable.pdf",
           "url": "https://drive.google.com/file/d/1fdlOukQlzMVbaKWIHAEYPERg5jZampSc/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1fdlOukQlzMVbaKWIHAEYPERg5jZampSc&sz=w700",
           "tipo": "application/pdf",
@@ -356,7 +383,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Belén en mandala.pdf",
+          "nombre": "Belén en mandala.pdf",
           "url": "https://drive.google.com/file/d/1Btaya3v-8OUNWMV1rAY7zOC8lox6n4Gf/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1Btaya3v-8OUNWMV1rAY7zOC8lox6n4Gf&sz=w700",
           "tipo": "application/pdf",
@@ -365,7 +392,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de BANDERINES b/n",
+          "nombre": "BANDERINES b/n",
           "url": "https://drive.google.com/file/d/1XTk4OjEQ0v7vBZEX7yF8lb-EDYgXuhNX/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1XTk4OjEQ0v7vBZEX7yF8lb-EDYgXuhNX&sz=w700",
           "tipo": "application/pdf",
@@ -374,7 +401,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de BANDERINES",
+          "nombre": " BANDERINES",
           "url": "https://drive.google.com/file/d/1SoZQVhxiCtVtuQa3tJB6H3Eso_0CqJtd/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1SoZQVhxiCtVtuQa3tJB6H3Eso_0CqJtd&sz=w700",
           "tipo": "application/pdf",
@@ -383,7 +410,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Arbol felicitación.pdf",
+          "nombre": " Arbol felicitación.pdf",
           "url": "https://drive.google.com/file/d/1KT--SoQ2wdoSKP1h8lUDNpW8ZuwY7geA/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1KT--SoQ2wdoSKP1h8lUDNpW8ZuwY7geA&sz=w700",
           "tipo": "application/pdf",
@@ -491,7 +518,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Comecocos.pdf",
+          "nombre": "Comecocos.pdf",
           "url": "https://drive.google.com/file/d/1f1WBMKUMnIpPsPGH8dQGKAwcUQxDuAyY/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1f1WBMKUMnIpPsPGH8dQGKAwcUQxDuAyY&sz=w700",
           "tipo": "application/pdf",
@@ -500,7 +527,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Calendario de adviento 2023.pdf",
+          "nombre": "Calendario de adviento.pdf",
           "url": "https://drive.google.com/file/d/14D-lOGQugnTiwYYELaJ56r3-HFRiU1TL/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=14D-lOGQugnTiwYYELaJ56r3-HFRiU1TL&sz=w700",
           "tipo": "application/pdf",
@@ -509,7 +536,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de calendario 2026",
+          "nombre": "calendario 2026",
           "url": "https://drive.google.com/file/d/1NKtmPCJ_QA7OZnZd6Jdp9Z8beaayJOoD/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1NKtmPCJ_QA7OZnZd6Jdp9Z8beaayJOoD&sz=w700",
           "tipo": "image/png",
@@ -518,7 +545,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Bingo Adviento.pdf",
+          "nombre": "Bingo Adviento.pdf",
           "url": "https://drive.google.com/file/d/1JKUpjVCU1Fmc5gTc5RrVMY8DUMX6eciA/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1JKUpjVCU1Fmc5gTc5RrVMY8DUMX6eciA&sz=w700",
           "tipo": "application/pdf",
@@ -527,7 +554,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de ADVIENTQUIZ.pdf",
+          "nombre": "ADVIENTQUIZ.pdf",
           "url": "https://drive.google.com/file/d/1fH90CfTLgFXJ3qUXOxRo2bKs_8IIpH8m/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1fH90CfTLgFXJ3qUXOxRo2bKs_8IIpH8m&sz=w700",
           "tipo": "application/pdf",
@@ -536,7 +563,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de ADVIENTO EL CAMINO HACIA JESÚS.pdf",
+          "nombre": " ADVIENTO EL CAMINO HACIA JESÚS.pdf",
           "url": "https://drive.google.com/file/d/1g5cbuFLnglcY3oFq6iMXGNZwv_UIV7Pg/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1g5cbuFLnglcY3oFq6iMXGNZwv_UIV7Pg&sz=w700",
           "tipo": "application/pdf",
@@ -545,7 +572,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Abre el corazón.pdf",
+          "nombre": " Abre el corazón.pdf",
           "url": "https://drive.google.com/file/d/1yc6Uf65EZRR4m5pLJ9VWEIwbHf7I_xcp/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1yc6Uf65EZRR4m5pLJ9VWEIwbHf7I_xcp&sz=w700",
           "tipo": "application/pdf",
@@ -566,6 +593,39 @@
     }
   ],
   "novedades": [
+    {
+      "nombre": "Copia de PUZZLE Navideño ",
+      "url": "https://drive.google.com/file/d/1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795472476395,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@welenyreli",
+      "instagram": "https://www.instagram.com/welenyreli/"
+    },
+    {
+      "nombre": "Copia de puzzle navidad 2",
+      "url": "https://drive.google.com/file/d/1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795472468360,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@welenyreli",
+      "instagram": "https://www.instagram.com/welenyreli/"
+    },
+    {
+      "nombre": "Copia de puzles Navidad.pdf",
+      "url": "https://drive.google.com/file/d/1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795472460802,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@welenyreli",
+      "instagram": "https://www.instagram.com/welenyreli/"
+    },
     {
       "nombre": "Copia de LINCES.pdf",
       "url": "https://drive.google.com/file/d/11G5h3iKkIpWj0J9TFK2ohOpASt-0nJzZ/view?usp=drivesdk",
@@ -589,7 +649,7 @@
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de CONTEO.pdf",
+      "nombre": "CONTEO.pdf",
       "url": "https://drive.google.com/file/d/1ykeEXVCMM8GkMMlWptPT3kCAOm4VjpAD/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1ykeEXVCMM8GkMMlWptPT3kCAOm4VjpAD&sz=w700",
       "tipo": "application/pdf",
@@ -660,39 +720,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1qYS50U04bCsDx9KSqieCREViuQP5bk_S&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472368814,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "Copia de regalo Navidad",
-      "url": "https://drive.google.com/file/d/16qZneNTt9g0UXDV9ZasdMsoTB7-s2idd/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=16qZneNTt9g0UXDV9ZasdMsoTB7-s2idd&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472367277,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "Copia de NIÑO JESÚS 2°",
-      "url": "https://drive.google.com/file/d/1lqCc5mVTtFYojXv-dOgVplDbywZzwttD/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1lqCc5mVTtFYojXv-dOgVplDbywZzwttD&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472350834,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "Copia de Navidad Cristiana",
-      "url": "https://drive.google.com/file/d/1qdPeFWCS-u130MgbS3KF90kMtzyvBECa/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1qdPeFWCS-u130MgbS3KF90kMtzyvBECa&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472341134,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@welenyreli",
