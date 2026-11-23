@@ -63,74 +63,11 @@
       "avatar": "https://drive.google.com/thumbnail?id=1ZLKrvYnoFotin2XbFoszBo-YisRE_fF4&sz=w400",
       "materiales": [
         {
-          "nombre": "2.png",
-          "url": "https://drive.google.com/file/d/1uN-Wo205H16qFkqxpk4iZhez0mAU4ePi/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1uN-Wo205H16qFkqxpk4iZhez0mAU4ePi&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468819880,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "6.png",
-          "url": "https://drive.google.com/file/d/1vXpjuq8Oak_LkiXxDgsAk_x6nAJHXxTz/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1vXpjuq8Oak_LkiXxDgsAk_x6nAJHXxTz&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468817466,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "7.png",
-          "url": "https://drive.google.com/file/d/1qzMU0qhkDObZGpLEolf8Yt2kPB2obBLB/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1qzMU0qhkDObZGpLEolf8Yt2kPB2obBLB&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468815017,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "1.png",
-          "url": "https://drive.google.com/file/d/1rpNPLt9ec9TIz6vg0YLHbQRkGxGm8_BX/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1rpNPLt9ec9TIz6vg0YLHbQRkGxGm8_BX&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468814879,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "3.png",
-          "url": "https://drive.google.com/file/d/1mQ2GKIma3ErZwAnPtMQgF_S5IxwwD4SX/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1mQ2GKIma3ErZwAnPtMQgF_S5IxwwD4SX&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468814759,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "5.png",
-          "url": "https://drive.google.com/file/d/1svZGfjbnrqLiUilLBp7wjWXEX90AeY86/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1svZGfjbnrqLiUilLBp7wjWXEX90AeY86&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468814747,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "4.png",
-          "url": "https://drive.google.com/file/d/1Kesk7X1aZfa3xOzsABKL5bP1A7le1_le/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1Kesk7X1aZfa3xOzsABKL5bP1A7le1_le&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468814739,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "Sobre.png",
-          "url": "https://drive.google.com/file/d/1gL8X-xMbwg9_4EmOl01t9EC-t_IF7Ms_/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1gL8X-xMbwg9_4EmOl01t9EC-t_IF7Ms_&sz=w700",
-          "tipo": "image/png",
-          "fechaOrden": 1795468814647,
+          "nombre": "Sobre.pdf",
+          "url": "https://drive.google.com/file/d/143QntkG_Z0SVY9Cp1cOLiiQ-8Mh3el4m/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=143QntkG_Z0SVY9Cp1cOLiiQ-8Mh3el4m&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795469740626,
           "fecha": "23/11/2026",
           "nuevo": true
         },
@@ -318,6 +255,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Sobre.pdf",
+      "url": "https://drive.google.com/file/d/143QntkG_Z0SVY9Cp1cOLiiQ-8Mh3el4m/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=143QntkG_Z0SVY9Cp1cOLiiQ-8Mh3el4m&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795469740626,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
       "nombre": "MasterChrist.pdf",
       "url": "https://drive.google.com/file/d/1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ&sz=w700",
@@ -340,94 +288,6 @@
       "instagram": "https://www.instagram.com/belen_reli/"
     },
     {
-      "nombre": "2.png",
-      "url": "https://drive.google.com/file/d/1uN-Wo205H16qFkqxpk4iZhez0mAU4ePi/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1uN-Wo205H16qFkqxpk4iZhez0mAU4ePi&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468819880,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "6.png",
-      "url": "https://drive.google.com/file/d/1vXpjuq8Oak_LkiXxDgsAk_x6nAJHXxTz/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1vXpjuq8Oak_LkiXxDgsAk_x6nAJHXxTz&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468817466,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "7.png",
-      "url": "https://drive.google.com/file/d/1qzMU0qhkDObZGpLEolf8Yt2kPB2obBLB/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1qzMU0qhkDObZGpLEolf8Yt2kPB2obBLB&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468815017,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "1.png",
-      "url": "https://drive.google.com/file/d/1rpNPLt9ec9TIz6vg0YLHbQRkGxGm8_BX/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1rpNPLt9ec9TIz6vg0YLHbQRkGxGm8_BX&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468814879,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "3.png",
-      "url": "https://drive.google.com/file/d/1mQ2GKIma3ErZwAnPtMQgF_S5IxwwD4SX/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1mQ2GKIma3ErZwAnPtMQgF_S5IxwwD4SX&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468814759,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "5.png",
-      "url": "https://drive.google.com/file/d/1svZGfjbnrqLiUilLBp7wjWXEX90AeY86/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1svZGfjbnrqLiUilLBp7wjWXEX90AeY86&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468814747,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "4.png",
-      "url": "https://drive.google.com/file/d/1Kesk7X1aZfa3xOzsABKL5bP1A7le1_le/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1Kesk7X1aZfa3xOzsABKL5bP1A7le1_le&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468814739,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
-      "nombre": "Sobre.png",
-      "url": "https://drive.google.com/file/d/1gL8X-xMbwg9_4EmOl01t9EC-t_IF7Ms_/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1gL8X-xMbwg9_4EmOl01t9EC-t_IF7Ms_&sz=w700",
-      "tipo": "image/png",
-      "fechaOrden": 1795468814647,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@reyes_de_reli",
-      "instagram": "https://www.instagram.com/reyes_de_reli/"
-    },
-    {
       "nombre": "Dossier Navidad.pdf",
       "url": "https://drive.google.com/file/d/18oPvELdcTQ6jNPz2HrVjCzSaseP-TAFV/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=18oPvELdcTQ6jNPz2HrVjCzSaseP-TAFV&sz=w700",
@@ -444,6 +304,83 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1FA-VROzNWW0ZC2y0wTrF7OD6c58gFJT9&sz=w700",
       "tipo": "image/png",
       "fechaOrden": 1795468546791,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
+      "nombre": "2.png",
+      "url": "https://drive.google.com/file/d/1LtVduYZaQLpdxHpvHJcCkAvgMjKkmYeh/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1LtVduYZaQLpdxHpvHJcCkAvgMjKkmYeh&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468544400,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
+      "nombre": "6.png",
+      "url": "https://drive.google.com/file/d/1VTakeX9y5ACwEWVqnTbvdxfhbE6GftzA/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1VTakeX9y5ACwEWVqnTbvdxfhbE6GftzA&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468541967,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
+      "nombre": "7.png",
+      "url": "https://drive.google.com/file/d/1byH9yd89Oqzxi_SvCRKRNxTNJHgDMRLI/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1byH9yd89Oqzxi_SvCRKRNxTNJHgDMRLI&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468539383,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
+      "nombre": "5.png",
+      "url": "https://drive.google.com/file/d/181rpGRnyymXIXa5UE4CvboU7qM74Wzwk/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=181rpGRnyymXIXa5UE4CvboU7qM74Wzwk&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468537121,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
+      "nombre": "4.png",
+      "url": "https://drive.google.com/file/d/1JxCKdPMLbBhSorz7Pa_UwX_GtlknUjwp/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1JxCKdPMLbBhSorz7Pa_UwX_GtlknUjwp&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468534863,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
+      "nombre": "10.png",
+      "url": "https://drive.google.com/file/d/1TtRXzoLIk8T87jrvrj8LpQDDZ0OfSglu/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1TtRXzoLIk8T87jrvrj8LpQDDZ0OfSglu&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468532556,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
+      "nombre": "11.png",
+      "url": "https://drive.google.com/file/d/1bpJ3z4_sbkleKvZNIjragZagoeFsgvsr/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1bpJ3z4_sbkleKvZNIjragZagoeFsgvsr&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468530389,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@reyes_de_reli",
