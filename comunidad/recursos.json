@@ -33,7 +33,26 @@
       "instagram": "",
       "blog": "",
       "avatar": "https://drive.google.com/thumbnail?id=1ZLKrvYnoFotin2XbFoszBo-YisRE_fF4&sz=w400",
-      "materiales": []
+      "materiales": [
+        {
+          "nombre": "Calendario de Adviento EP 2026.png",
+          "url": "https://drive.google.com/file/d/119kOSprhq_VE5xmjOtpXQDUmHUZ1gFtN/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=119kOSprhq_VE5xmjOtpXQDUmHUZ1gFtN&sz=w700",
+          "tipo": "image/png",
+          "fechaOrden": 1795468140304,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "Calendario de Adviento EI 2026.png",
+          "url": "https://drive.google.com/file/d/1bMLXkDRkTRh0o4uMT3-z1PHSQXw6_IyD/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1bMLXkDRkTRh0o4uMT3-z1PHSQXw6_IyD&sz=w700",
+          "tipo": "image/png",
+          "fechaOrden": 1795468103854,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        }
+      ]
     },
     {
       "nombre": "@welenyreli",
@@ -54,6 +73,28 @@
     }
   ],
   "novedades": [
+    {
+      "nombre": "Calendario de Adviento EP 2026.png",
+      "url": "https://drive.google.com/file/d/119kOSprhq_VE5xmjOtpXQDUmHUZ1gFtN/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=119kOSprhq_VE5xmjOtpXQDUmHUZ1gFtN&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468140304,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": ""
+    },
+    {
+      "nombre": "Calendario de Adviento EI 2026.png",
+      "url": "https://drive.google.com/file/d/1bMLXkDRkTRh0o4uMT3-z1PHSQXw6_IyD/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1bMLXkDRkTRh0o4uMT3-z1PHSQXw6_IyD&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795468103854,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": ""
+    },
     {
       "nombre": "cartas reyes .pdf",
       "url": "https://drive.google.com/file/d/164ISk6Po-YUcB0QnFygMnAVPJXyn0bAi/view?usp=drivesdk",
