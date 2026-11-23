@@ -58,7 +58,17 @@
       "blog": "https://sites.google.com/view/blogdelaclasedeprofereli94/",
       "whatsapp": "",
       "avatar": "https://drive.google.com/thumbnail?id=1Ak0-I5xtahuJarVvcCxj2kVLkQWjK6Yd&sz=w400",
-      "materiales": []
+      "materiales": [
+        {
+          "nombre": "BINGO NAVIDAD.pdf",
+          "url": "https://drive.google.com/file/d/1sS943syy0RwErV8BMGaTLGKc0eaaVukQ/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1sS943syy0RwErV8BMGaTLGKc0eaaVukQ&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795473032113,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        }
+      ]
     },
     {
       "nombre": "@reyes_de_reli",
@@ -122,7 +132,7 @@
       "avatar": "https://drive.google.com/thumbnail?id=1uT-aro4agnP0gidR3Zp7glJ-yE6rvsQa&sz=w400",
       "materiales": [
         {
-          "nombre": "Copia de PUZZLE Navideño ",
+          "nombre": "PUZZLE Navideño ",
           "url": "https://drive.google.com/file/d/1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH&sz=w700",
           "tipo": "application/pdf",
@@ -131,7 +141,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de puzzle navidad 2",
+          "nombre": "puzzle navidad 2",
           "url": "https://drive.google.com/file/d/1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp&sz=w700",
           "tipo": "application/pdf",
@@ -140,7 +150,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de puzles Navidad.pdf",
+          "nombre": " puzles Navidad.pdf",
           "url": "https://drive.google.com/file/d/1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ&sz=w700",
           "tipo": "application/pdf",
@@ -176,16 +186,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de series Navidad",
-          "url": "https://drive.google.com/file/d/1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c&sz=w700",
-          "tipo": "application/pdf",
-          "fechaOrden": 1795472394219,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "Copia de TARJETAS.pdf",
+          "nombre": "TARJETAS.pdf",
           "url": "https://drive.google.com/file/d/1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4&sz=w700",
           "tipo": "application/pdf",
@@ -194,34 +195,16 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de regalo Navidad",
-          "url": "https://drive.google.com/file/d/1XGp0aYhxgH5Z6ZKQDtAUurR1MeMAbNWW/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1XGp0aYhxgH5Z6ZKQDtAUurR1MeMAbNWW&sz=w700",
+          "nombre": "Series Navidad",
+          "url": "https://drive.google.com/file/d/1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c&sz=w700",
           "tipo": "application/pdf",
-          "fechaOrden": 1795472392420,
+          "fechaOrden": 1795472394219,
           "fecha": "23/11/2026",
           "nuevo": true
         },
         {
-          "nombre": "Copia de Niño Jesús.pdf",
-          "url": "https://drive.google.com/file/d/1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60&sz=w700",
-          "tipo": "application/pdf",
-          "fechaOrden": 1795472368814,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "Copia de Pasapalabra Navidad.pdf",
-          "url": "https://drive.google.com/file/d/1RReXx2kK4v1FATISqY39VLq9UrJTl_9B/view?usp=drivesdk",
-          "miniatura": "https://drive.google.com/thumbnail?id=1RReXx2kK4v1FATISqY39VLq9UrJTl_9B&sz=w700",
-          "tipo": "application/pdf",
-          "fechaOrden": 1795472368814,
-          "fecha": "23/11/2026",
-          "nuevo": true
-        },
-        {
-          "nombre": "Copia de Pesebre que se abre.pdf",
+          "nombre": "Pesebre que se abre.pdf",
           "url": "https://drive.google.com/file/d/1qYS50U04bCsDx9KSqieCREViuQP5bk_S/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1qYS50U04bCsDx9KSqieCREViuQP5bk_S&sz=w700",
           "tipo": "application/pdf",
@@ -230,7 +213,25 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de regalo Navidad",
+          "nombre": "Pasapalabra Navidad.pdf",
+          "url": "https://drive.google.com/file/d/1RReXx2kK4v1FATISqY39VLq9UrJTl_9B/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1RReXx2kK4v1FATISqY39VLq9UrJTl_9B&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795472368814,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "Niño Jesús.pdf",
+          "url": "https://drive.google.com/file/d/1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795472368814,
+          "fecha": "23/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "Regalo Navidad",
           "url": "https://drive.google.com/file/d/16qZneNTt9g0UXDV9ZasdMsoTB7-s2idd/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=16qZneNTt9g0UXDV9ZasdMsoTB7-s2idd&sz=w700",
           "tipo": "application/pdf",
@@ -239,7 +240,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de NIÑO JESÚS 2°",
+          "nombre": " NIÑO JESÚS",
           "url": "https://drive.google.com/file/d/1lqCc5mVTtFYojXv-dOgVplDbywZzwttD/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1lqCc5mVTtFYojXv-dOgVplDbywZzwttD&sz=w700",
           "tipo": "application/pdf",
@@ -419,7 +420,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de velas.pdf",
+          "nombre": "Velas.pdf",
           "url": "https://drive.google.com/file/d/1I2jEaUPBl6BpXlsnHgcRIO4fO64zW0ag/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1I2jEaUPBl6BpXlsnHgcRIO4fO64zW0ag&sz=w700",
           "tipo": "application/pdf",
@@ -428,7 +429,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de queda navidad.pdf",
+          "nombre": "Queda navidad.pdf",
           "url": "https://drive.google.com/file/d/1HYzMwdFfOV1lEiNszEGkpyY52JUeeR4O/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1HYzMwdFfOV1lEiNszEGkpyY52JUeeR4O&sz=w700",
           "tipo": "application/pdf",
@@ -437,7 +438,7 @@
           "nuevo": true
         },
         {
-          "nombre": "Copia de Pictionary reli.pdf",
+          "nombre": "Pictionary reli.pdf",
           "url": "https://drive.google.com/file/d/1-N5Fu-nlak7AUiMiWHr-Jp4EBmEl3FEl/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1-N5Fu-nlak7AUiMiWHr-Jp4EBmEl3FEl&sz=w700",
           "tipo": "application/pdf",
@@ -585,7 +586,18 @@
   ],
   "novedades": [
     {
-      "nombre": "Copia de PUZZLE Navideño ",
+      "nombre": "BINGO NAVIDAD.pdf",
+      "url": "https://drive.google.com/file/d/1sS943syy0RwErV8BMGaTLGKc0eaaVukQ/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1sS943syy0RwErV8BMGaTLGKc0eaaVukQ&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795473032113,
+      "fecha": "23/11/2026",
+      "nuevo": true,
+      "autora": "@profereli94",
+      "instagram": "https://www.instagram.com/profereli94/"
+    },
+    {
+      "nombre": "PUZZLE Navideño ",
       "url": "https://drive.google.com/file/d/1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH&sz=w700",
       "tipo": "application/pdf",
@@ -596,7 +608,7 @@
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de puzzle navidad 2",
+      "nombre": "puzzle navidad 2",
       "url": "https://drive.google.com/file/d/1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp&sz=w700",
       "tipo": "application/pdf",
@@ -607,7 +619,7 @@
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de puzles Navidad.pdf",
+      "nombre": " puzles Navidad.pdf",
       "url": "https://drive.google.com/file/d/1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ&sz=w700",
       "tipo": "application/pdf",
@@ -651,18 +663,7 @@
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de series Navidad",
-      "url": "https://drive.google.com/file/d/1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472394219,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "Copia de TARJETAS.pdf",
+      "nombre": "TARJETAS.pdf",
       "url": "https://drive.google.com/file/d/1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4&sz=w700",
       "tipo": "application/pdf",
@@ -673,20 +674,20 @@
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de regalo Navidad",
-      "url": "https://drive.google.com/file/d/1XGp0aYhxgH5Z6ZKQDtAUurR1MeMAbNWW/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1XGp0aYhxgH5Z6ZKQDtAUurR1MeMAbNWW&sz=w700",
+      "nombre": "Series Navidad",
+      "url": "https://drive.google.com/file/d/1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1IEqoK_EtOdj7wX9VIj_PiZojPTssFW8c&sz=w700",
       "tipo": "application/pdf",
-      "fechaOrden": 1795472392420,
+      "fechaOrden": 1795472394219,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@welenyreli",
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de Niño Jesús.pdf",
-      "url": "https://drive.google.com/file/d/1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60&sz=w700",
+      "nombre": "Pesebre que se abre.pdf",
+      "url": "https://drive.google.com/file/d/1qYS50U04bCsDx9KSqieCREViuQP5bk_S/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1qYS50U04bCsDx9KSqieCREViuQP5bk_S&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472368814,
       "fecha": "23/11/2026",
@@ -695,7 +696,7 @@
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de Pasapalabra Navidad.pdf",
+      "nombre": "Pasapalabra Navidad.pdf",
       "url": "https://drive.google.com/file/d/1RReXx2kK4v1FATISqY39VLq9UrJTl_9B/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1RReXx2kK4v1FATISqY39VLq9UrJTl_9B&sz=w700",
       "tipo": "application/pdf",
@@ -706,9 +707,9 @@
       "instagram": "https://www.instagram.com/welenyreli/"
     },
     {
-      "nombre": "Copia de Pesebre que se abre.pdf",
-      "url": "https://drive.google.com/file/d/1qYS50U04bCsDx9KSqieCREViuQP5bk_S/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1qYS50U04bCsDx9KSqieCREViuQP5bk_S&sz=w700",
+      "nombre": "Niño Jesús.pdf",
+      "url": "https://drive.google.com/file/d/1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1HOda3uvCVbwAW35P_5VTJzf1TzVFuj60&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472368814,
       "fecha": "23/11/2026",
