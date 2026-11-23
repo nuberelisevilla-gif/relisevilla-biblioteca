@@ -73,7 +73,6 @@ function imagenHTML(url,clase,alternativo){ return url
     : '';
 }
 function tarjetaRecurso(r){const imagen=r.miniatura?imagenHTML(r.miniatura,'',r.nombre):'<span aria-hidden="true">📄</span>';const autora=r.instagram?`<a href="${urlSegura(r.instagram)}" target="_blank" rel="noopener noreferrer">${escapar(r.autora)}</a>`:escapar(r.autora);return `<article class="tarjeta"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${escapar(r.nombre)}"><div class="imagen">${imagen}</div></a><div class="contenido">${r.nuevo?'<span class="nuevo">NUEVO</span>':''}<div class="titulo"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer">${escapar(r.nombre)}</a></div><div class="autor">Compartido por ${autora}</div><div class="fecha">${escapar(r.fecha)}</div></div></article>`;}
-function tarjetaColaboradora(c)
 function tarjetaColaboradora(c) {
   const avatar = c.avatar
     ? imagenHTML(c.avatar, 'avatar', c.nombre)
