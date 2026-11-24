@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-24T21:06:34.711Z",
+  "actualizado": "2026-11-24T21:21:35.329Z",
   "recursos": [
     {
       "titulo": "Pasapalabra de Navidad",
@@ -33,6 +33,28 @@
       "herramienta": "Kahoot",
       "enlace": "https://create.kahoot.it/share/el-adviento/441829ef-030d-4950-b53a-fa06506d5b7e",
       "portada": ""
+    },
+    {
+      "titulo": "Prueba",
+      "autor": "relisevilla",
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://view.genially.com/61a74167238e570d68fb83b6",
+      "portada": "https://thumbnails.genially.com/5bdb269fa302b9520da82836/screenshots/b4620b95-5340-4aa7-94c1-846d1e7c5014.jpg"
+    },
+    {
+      "titulo": "probando",
+      "autor": "mar",
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Secundaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://www.relisevilla.es",
+      "portada": "https://lh7-us.googleusercontent.com/sitesv-images-rt/APXyLQdJqQ97-548BXA9gIy1wvm7Mp9QRj2S78GMuh3GdtGQuckTMAGoJGMB1NiAee9dFkRnLhDyT_IeYxL1IV6l3U6q6nyD-zg9dy-rJLgwF0uJnmtZAKBRBzlXw8j54LnlWZFnmyZzvofBmdAVybN5gGT4PFVP8wspximBLUyce4Xa7IVRbgxcqVqOsEqmgPg=w16383"
     }
   ]
 }
