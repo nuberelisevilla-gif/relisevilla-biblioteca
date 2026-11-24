@@ -465,9 +465,28 @@ tarjeta.appendChild(portada);
 
   tarjeta.appendChild(chips);
 
-  tarjeta.appendChild(
-    crearElemento('p','autor','✍️ Recurso de: '+(recurso.autor || 'Autoría no indicada'))
+  
+  // Mostrar correctamente la autoría del recurso
+  const autor = crearElemento(
+    'p',
+    'autor',
+    '✍️ Creado por: ' +
+      (recurso.autor || 'Autoría no identificada')
   );
+
+  tarjeta.appendChild(autor);
+
+  // Mostrar quién lo comparte solo si no es el autor
+  if (recurso.esAutor === false && recurso.compartidoPor) {
+    const compartido = crearElemento(
+      'p',
+      'autor',
+      '🤝 Compartido por: ' + recurso.compartidoPor
+    );
+
+    tarjeta.appendChild(compartido);
+  }
+
 
   const boton = crearElemento('a','boton','Abrir actividad ↗');
   boton.href = recurso.enlace;
