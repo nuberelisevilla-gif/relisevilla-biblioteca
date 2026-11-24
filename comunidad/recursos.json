@@ -124,6 +124,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1ZLKrvYnoFotin2XbFoszBo-YisRE_fF4&sz=w400",
       "materiales": [
         {
+          "nombre": "Calendario de Adviento colorear infantil.jpg",
+          "url": "https://drive.google.com/file/d/1V-rLUGrt24Z-Ij5GNhRMMEjiK0AHMak7/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1V-rLUGrt24Z-Ij5GNhRMMEjiK0AHMak7&sz=w700",
+          "tipo": "image/jpeg",
+          "fechaOrden": 1795524227102,
+          "fecha": "24/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "juego_los_3_reyes_magos.pdf",
           "url": "https://drive.google.com/file/d/1dIVEHS07RWjV7lkWQNUwu-dBVy38vEPu/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1dIVEHS07RWjV7lkWQNUwu-dBVy38vEPu&sz=w700",
@@ -632,6 +641,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Calendario de Adviento colorear infantil.jpg",
+      "url": "https://drive.google.com/file/d/1V-rLUGrt24Z-Ij5GNhRMMEjiK0AHMak7/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1V-rLUGrt24Z-Ij5GNhRMMEjiK0AHMak7&sz=w700",
+      "tipo": "image/jpeg",
+      "fechaOrden": 1795524227102,
+      "fecha": "24/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
       "nombre": "TAPETE NAVIDAD 01.pdf",
       "url": "https://drive.google.com/file/d/1FQ04jGvuREeYt2RlMr2YbSFueMrd_ItO/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1FQ04jGvuREeYt2RlMr2YbSFueMrd_ItO&sz=w700",
@@ -747,17 +767,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1ykeEXVCMM8GkMMlWptPT3kCAOm4VjpAD&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472415107,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "TARJETAS.pdf",
-      "url": "https://drive.google.com/file/d/1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1l1PzU0018fOr79cpGj3vUwhbZHKp0pg4&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472394219,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@welenyreli",
