@@ -16,6 +16,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1hf6gSpHW1ZTq-UxngCZ6lcQvlFhZEOeH&sz=w400",
       "materiales": [
         {
+          "nombre": "Juegos adviento.pdf",
+          "url": "https://drive.google.com/file/d/1ZvWX4egiAcuGUHg8X081M7Go-e1vcx4n/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1ZvWX4egiAcuGUHg8X081M7Go-e1vcx4n&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795540990877,
+          "fecha": "24/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "MasterChrist.pdf",
           "url": "https://drive.google.com/file/d/1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1PMr4t5-c_F5EEGhCJ7AyZWqKEzcbHQhZ&sz=w700",
@@ -650,6 +659,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Juegos adviento.pdf",
+      "url": "https://drive.google.com/file/d/1ZvWX4egiAcuGUHg8X081M7Go-e1vcx4n/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1ZvWX4egiAcuGUHg8X081M7Go-e1vcx4n&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795540990877,
+      "fecha": "24/11/2026",
+      "nuevo": true,
+      "autora": "@belen_reli",
+      "instagram": "https://www.instagram.com/belen_reli/"
+    },
+    {
       "nombre": "Adviento primer ciclo.pdf",
       "url": "https://drive.google.com/file/d/1fHbbI6G8Bn6XkudNHHyXOx_GO0tQSWkX/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1fHbbI6G8Bn6XkudNHHyXOx_GO0tQSWkX&sz=w700",
@@ -765,17 +785,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=11G5h3iKkIpWj0J9TFK2ohOpASt-0nJzZ&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472446102,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": " Dominó Sagrada familia ",
-      "url": "https://drive.google.com/file/d/1g2D5yQ1UwD9IBP4uxDnPozmZzPROchDy/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1g2D5yQ1UwD9IBP4uxDnPozmZzPROchDy&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472430394,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@welenyreli",
