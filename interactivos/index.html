@@ -168,6 +168,32 @@ input:focus,select:focus,a:focus-visible {
   .panel {padding:17px}
   .filtros,.tarjetas {grid-template-columns:1fr}
 }
+  
+.portada-recurso {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background: #edf3fa;
+}
+
+.portada-recurso img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portada-alternativa {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  background: linear-gradient(135deg, #e5f0fc, #d4e5f5);
+}
 </style>
 </head>
 
@@ -298,9 +324,39 @@ function llenarFiltro(id,valores) {
 function crearTarjeta(recurso) {
   const tarjeta = crearElemento('article','tarjeta');
 
-  tarjeta.appendChild(
-    crearElemento('div','icono',iconoHerramienta(recurso.herramienta))
-  );
+
+const portada = crearElemento('div', 'portada-recurso');
+
+const imagen = document.createElement('img');
+imagen.alt = 'Portada de ' + texto(recurso.titulo);
+imagen.loading = 'lazy';
+imagen.referrerPolicy = 'no-referrer';
+
+const alternativa = crearElemento(
+  'div',
+  'portada-alternativa',
+  iconoHerramienta(recurso.herramienta)
+);
+
+const mostrarAlternativa = () => {
+  imagen.style.display = 'none';
+  alternativa.style.display = 'flex';
+};
+
+imagen.onerror = mostrarAlternativa;
+
+portada.appendChild(imagen);
+portada.appendChild(alternativa);
+
+if (recurso.portada && /^https:\/\//i.test(recurso.portada)) {
+  imagen.src = recurso.portada;
+  alternativa.style.display = 'none';
+} else {
+  mostrarAlternativa();
+}
+
+tarjeta.appendChild(portada);
+
 
   tarjeta.appendChild(
     crearElemento('h3','',texto(recurso.titulo))
