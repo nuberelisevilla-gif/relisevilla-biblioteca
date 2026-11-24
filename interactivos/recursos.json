@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-24T19:57:04.156Z",
+  "actualizado": "2026-11-24T20:03:18.523Z",
   "recursos": [
     {
       "titulo": "Pasapalabra de Navidad",
@@ -11,6 +11,28 @@
       "herramienta": "Genially",
       "enlace": "https://view.genially.com/61a74167238e570d68fb83b6",
       "portada": "https://thumbnails.genially.com/5bdb269fa302b9520da82836/screenshots/b4620b95-5340-4aa7-94c1-846d1e7c5014.jpg"
+    },
+    {
+      "titulo": "Sopa de letras Navidad",
+      "autor": "educaplay",
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Educaplay",
+      "enlace": "https://es.educaplay.com/recursos-educativos/4178985-navidad.html",
+      "portada": "https://cloud.educaplay.com/r/img/og-image.webp"
+    },
+    {
+      "titulo": "Kahoot Adviento Sencillo",
+      "autor": "Kahoot",
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Kahoot",
+      "enlace": "https://create.kahoot.it/share/el-adviento/441829ef-030d-4950-b53a-fa06506d5b7e",
+      "portada": ""
     }
   ]
 }
