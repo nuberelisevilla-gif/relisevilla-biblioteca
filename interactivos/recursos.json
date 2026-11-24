@@ -1,4 +1,16 @@
 {
-  "actualizado": "2026-11-24T19:36:34.238Z",
-  "recursos": []
+  "actualizado": "2026-11-24T19:44:52.603Z",
+  "recursos": [
+    {
+      "titulo": "Pasapalabra de Navidad",
+      "autor": "otros",
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://view.genially.com/61a74167238e570d68fb83b6",
+      "portada": "https://thumbnails.genially.com/5bdb269fa302b9520da82836/screenshots/b4620b95-5340-4aa7-94c1-846d1e7c5014.jpg"
+    }
+  ]
 }
