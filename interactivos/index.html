@@ -355,12 +355,6 @@ async function iniciar() {
         )
       : [];
 
-    // Fase inicial: mostrar únicamente Adviento y Navidad
-    recursos = recursos.filter(r=>
-      normalizar(r.tematica).includes('adviento') ||
-      normalizar(r.tematica).includes('navidad')
-    );
-
     llenarFiltro('tema',recursos.map(r=>r.tematica));
     llenarFiltro('etapa',recursos.flatMap(r=>r.etapas || []));
     llenarFiltro('herramienta',recursos.map(r=>r.herramienta));
