@@ -6,7 +6,17 @@
       "blog": "",
       "whatsapp": "",
       "avatar": "https://drive.google.com/thumbnail?id=1S2bXBok4wA59HTPlGU09b0trbjoPRo_I&sz=w400",
-      "materiales": []
+      "materiales": [
+        {
+          "nombre": "Pintar con los dedos.pdf",
+          "url": "https://drive.google.com/file/d/1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795551643520,
+          "fecha": "24/11/2026",
+          "nuevo": true
+        }
+      ]
     },
     {
       "nombre": "@belen_reli",
@@ -677,6 +687,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Pintar con los dedos.pdf",
+      "url": "https://drive.google.com/file/d/1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795551643520,
+      "fecha": "24/11/2026",
+      "nuevo": true,
+      "autora": "@anac.reli",
+      "instagram": "https://www.instagram.com/anac.reli/"
+    },
+    {
       "nombre": "Corona Adviento colorear.pdf",
       "url": "https://drive.google.com/file/d/1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW&sz=w700",
@@ -792,17 +813,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472476395,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": "puzzle navidad 2",
-      "url": "https://drive.google.com/file/d/1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472468360,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@welenyreli",
