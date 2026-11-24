@@ -133,6 +133,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1ZLKrvYnoFotin2XbFoszBo-YisRE_fF4&sz=w400",
       "materiales": [
         {
+          "nombre": "Corona Adviento colorear.pdf",
+          "url": "https://drive.google.com/file/d/1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795546251706,
+          "fecha": "24/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Adviento primer ciclo.pdf",
           "url": "https://drive.google.com/file/d/1fHbbI6G8Bn6XkudNHHyXOx_GO0tQSWkX/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1fHbbI6G8Bn6XkudNHHyXOx_GO0tQSWkX&sz=w700",
@@ -668,6 +677,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Corona Adviento colorear.pdf",
+      "url": "https://drive.google.com/file/d/1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795546251706,
+      "fecha": "24/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
       "nombre": "dijiste Sí.pdf",
       "url": "https://drive.google.com/file/d/1iK8yMKADCVMPOGyzOZzaGQ7gRKfy0XYP/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1iK8yMKADCVMPOGyzOZzaGQ7gRKfy0XYP&sz=w700",
@@ -783,17 +803,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1g-erWMXzDmkDi2G3z3izEvCK9TKkfbBp&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795472468360,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
-    },
-    {
-      "nombre": " puzles Navidad.pdf",
-      "url": "https://drive.google.com/file/d/1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1Pbn4aoxYMw4-33R4xVA_rwKsxRArkTQJ&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472460802,
       "fecha": "23/11/2026",
       "nuevo": true,
       "autora": "@welenyreli",
