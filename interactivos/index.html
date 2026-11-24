@@ -2,12 +2,392 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Recursos Interactivos | RELISEVILLA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Biblioteca de recursos interactivos para el profesorado de Religión Católica. Juegos, Kahoot, Genially, Wordwall y actividades digitales organizadas por temática y etapa educativa.">
+<title>Recursos Interactivos para Religión Católica | RELISEVILLA</title>
+
+<style>
+:root {
+  --azul:#173e68;
+  --azul2:#286da4;
+  --fondo:#f4f8fc;
+  --texto:#23384b;
+  --borde:#dfe8f1;
+}
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--fondo);
+  color:var(--texto);
+  line-height:1.55;
+}
+a {color:inherit}
+.contenedor {max-width:1200px;margin:auto;padding:22px}
+.hero {
+  background:linear-gradient(125deg,#153b65,#327eaf);
+  color:white;
+  padding:42px 32px;
+  border-radius:22px;
+}
+.hero h1 {font-size:clamp(27px,4vw,42px);margin:8px 0}
+.hero p {max-width:720px;margin:0;opacity:.95}
+.etiqueta-superior {
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:bold;
+}
+.navegacion {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.navegacion a {
+  text-decoration:none;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:30px;
+  padding:9px 15px;
+  font-size:13px;
+}
+.navegacion a:hover {background:rgba(255,255,255,.28)}
+.panel {
+  background:white;
+  border:1px solid var(--borde);
+  border-radius:18px;
+  padding:22px;
+  margin:22px 0;
+}
+.panel h2 {margin:0 0 8px;color:var(--azul)}
+.filtros {
+  display:grid;
+  grid-template-columns:2fr repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+input,select {
+  width:100%;
+  padding:13px;
+  border:1px solid #cbd8e4;
+  border-radius:11px;
+  font:inherit;
+  background:white;
+  color:var(--texto);
+}
+input:focus,select:focus,a:focus-visible {
+  outline:3px solid #e5b953;
+  outline-offset:2px;
+}
+.resultados {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:22px 0 14px;
+}
+.resultados h2 {margin:0;color:var(--azul)}
+#contador {font-size:14px;color:#52687a}
+.tarjetas {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:17px;
+}
+.tarjeta {
+  display:flex;
+  flex-direction:column;
+  background:white;
+  border:1px solid var(--borde);
+  border-radius:17px;
+  padding:21px;
+  box-shadow:0 5px 20px rgba(25,59,93,.04);
+}
+.tarjeta:hover {
+  box-shadow:0 9px 25px rgba(25,59,93,.10);
+}
+.icono {font-size:30px;margin-bottom:10px}
+.tarjeta h3 {
+  margin:0 0 10px;
+  font-size:19px;
+  color:var(--azul);
+}
+.chips {display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+.chip {
+  font-size:12px;
+  padding:5px 9px;
+  border-radius:30px;
+  background:#eaf2fb;
+  color:#215986;
+}
+.chip.etapa {background:#f1eafa;color:#69449a}
+.chip.tema {background:#e8f5ee;color:#276a4b}
+.autor {
+  color:#607285;
+  font-size:13px;
+  margin:8px 0 18px;
+}
+.boton {
+  display:inline-block;
+  margin-top:auto;
+  background:var(--azul);
+  color:white;
+  text-decoration:none;
+  text-align:center;
+  padding:12px 15px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:14px;
+}
+.boton:hover {background:var(--azul2)}
+.vacio {
+  grid-column:1/-1;
+  text-align:center;
+  padding:45px 20px;
+  background:white;
+  border:1px dashed #cbd8e4;
+  border-radius:16px;
+}
+.vacio h3 {color:var(--azul)}
+.pie {
+  margin:28px 0;
+  padding:22px;
+  text-align:center;
+  color:#617486;
+  font-size:13px;
+}
+@media(max-width:900px) {
+  .filtros {grid-template-columns:repeat(2,1fr)}
+  .tarjetas {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px) {
+  .contenedor {padding:12px}
+  .hero {padding:29px 21px}
+  .panel {padding:17px}
+  .filtros,.tarjetas {grid-template-columns:1fr}
+}
+</style>
 </head>
+
 <body>
-  <h1>Recursos Interactivos RELISEVILLA</h1>
-  <p>Próximamente encontrarás aquí juegos y actividades interactivas para el aula de Religión Católica.</p>
+<main class="contenedor">
+
+<header class="hero">
+  <div class="etiqueta-superior">RELISEVILLA · Recursos para el aula</div>
+  <h1>🎮 Biblioteca de Recursos Interactivos</h1>
+  <p>Descubre juegos, retos y actividades digitales para enseñar y aprender Religión Católica de forma dinámica, creativa y participativa.</p>
+
+  <nav class="navegacion" aria-label="Bibliotecas RELISEVILLA">
+    <a href="https://www.relisevilla.es/recursos">📚 Materiales imprimibles</a>
+    <a href="https://www.relisevilla.es/recursos/videoteca-educativa">🎬 Videoteca educativa</a>
+    <a href="https://www.relisevilla.es/">🏠 RELISEVILLA</a>
+  </nav>
+</header>
+
+<section class="panel">
+  <h2>Encuentra tu próxima actividad</h2>
+  <p>Busca por título, autor, temática o herramienta y selecciona la etapa educativa que necesites.</p>
+
+  <div class="filtros">
+    <input id="busqueda" type="search" placeholder="🔎 Buscar recursos..." aria-label="Buscar recursos">
+    <select id="tema" aria-label="Filtrar por temática">
+      <option value="">Todas las temáticas</option>
+    </select>
+    <select id="etapa" aria-label="Filtrar por etapa">
+      <option value="">Todas las etapas</option>
+    </select>
+    <select id="herramienta" aria-label="Filtrar por herramienta">
+      <option value="">Todas las herramientas</option>
+    </select>
+  </div>
+</section>
+
+<section aria-label="Listado de recursos">
+  <div class="resultados">
+    <h2>Actividades para el aula</h2>
+    <span id="contador" aria-live="polite">Cargando recursos...</span>
+  </div>
+  <div id="tarjetas" class="tarjetas" aria-live="polite"></div>
+</section>
+
+<footer class="pie">
+  RELISEVILLA · Recursos compartidos por docentes de Religión Católica.
+  <p>Gracias al profesorado que comparte sus creaciones y experiencias.</p>
+</footer>
+
+</main>
+
+<script>
+const ARCHIVO = './recursos.json';
+let recursos = [];
+
+const $ = id => document.getElementById(id);
+
+function texto(valor) {
+  return String(valor || '').trim();
+}
+
+function normalizar(valor) {
+  return texto(valor)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase();
+}
+
+function iconoHerramienta(nombre) {
+  const n = normalizar(nombre);
+  if(n.includes('kahoot')) return '🎯';
+  if(n.includes('genially')) return '✨';
+  if(n.includes('wordwall')) return '🧩';
+  if(n.includes('educaplay')) return '🎲';
+  if(n.includes('canva')) return '🎨';
+  if(n.includes('forms')) return '📝';
+  return '🎮';
+}
+
+function crearElemento(etiqueta,clase,contenido) {
+  const el = document.createElement(etiqueta);
+  if(clase) el.className = clase;
+  if(contenido !== undefined) el.textContent = contenido;
+  return el;
+}
+
+function llenarFiltro(id,valores) {
+  const select = $(id);
+  const opciones = [...new Set(valores.filter(Boolean))]
+    .sort((a,b)=>a.localeCompare(b,'es'));
+
+  opciones.forEach(valor=>{
+    const option = document.createElement('option');
+    option.value = valor;
+    option.textContent = valor;
+    select.appendChild(option);
+  });
+}
+
+function crearTarjeta(recurso) {
+  const tarjeta = crearElemento('article','tarjeta');
+
+  tarjeta.appendChild(
+    crearElemento('div','icono',iconoHerramienta(recurso.herramienta))
+  );
+
+  tarjeta.appendChild(
+    crearElemento('h3','',texto(recurso.titulo))
+  );
+
+  const chips = crearElemento('div','chips');
+
+  if(recurso.tematica) {
+    chips.appendChild(crearElemento('span','chip tema',recurso.tematica));
+  }
+
+  (recurso.etapas || []).forEach(etapa=>{
+    chips.appendChild(crearElemento('span','chip etapa',etapa));
+  });
+
+  if(recurso.herramienta) {
+    chips.appendChild(crearElemento('span','chip',recurso.herramienta));
+  }
+
+  tarjeta.appendChild(chips);
+
+  tarjeta.appendChild(
+    crearElemento('p','autor','✍️ Recurso de: '+(recurso.autor || 'Autoría no indicada'))
+  );
+
+  const boton = crearElemento('a','boton','Abrir actividad ↗');
+  boton.href = recurso.enlace;
+  boton.target = '_blank';
+  boton.rel = 'noopener noreferrer';
+  tarjeta.appendChild(boton);
+
+  return tarjeta;
+}
+
+function renderizar() {
+  const busqueda = normalizar($('busqueda').value);
+  const tema = $('tema').value;
+  const etapa = $('etapa').value;
+  const herramienta = $('herramienta').value;
+
+  const visibles = recursos.filter(r=>{
+    const contenido = normalizar([
+      r.titulo,r.autor,r.tematica,r.herramienta,
+      ...(r.etapas || [])
+    ].join(' '));
+
+    return (!busqueda || contenido.includes(busqueda))
+      && (!tema || r.tematica === tema)
+      && (!etapa || (r.etapas || []).includes(etapa))
+      && (!herramienta || r.herramienta === herramienta);
+  });
+
+  const contenedor = $('tarjetas');
+  contenedor.replaceChildren();
+
+  $('contador').textContent =
+    visibles.length + (visibles.length === 1 ? ' recurso' : ' recursos');
+
+  if(!visibles.length) {
+    const vacio = crearElemento('div','vacio');
+    vacio.appendChild(crearElemento('h3','','No encontramos actividades con estos filtros'));
+    vacio.appendChild(crearElemento('p','','Prueba otra búsqueda o selecciona una temática diferente.'));
+    contenedor.appendChild(vacio);
+    return;
+  }
+
+  visibles.forEach(r=>contenedor.appendChild(crearTarjeta(r)));
+}
+
+async function iniciar() {
+  try {
+    const respuesta = await fetch(ARCHIVO,{cache:'no-store'});
+    if(!respuesta.ok) throw new Error('No se pudo cargar el catálogo');
+
+    const datos = await respuesta.json();
+
+    recursos = Array.isArray(datos.recursos)
+      ? datos.recursos.filter(r =>
+          r && r.titulo && /^https?:\/\//i.test(r.enlace || '')
+        )
+      : [];
+
+    // Fase inicial: mostrar únicamente Adviento y Navidad
+    recursos = recursos.filter(r=>
+      normalizar(r.tematica).includes('adviento') ||
+      normalizar(r.tematica).includes('navidad')
+    );
+
+    llenarFiltro('tema',recursos.map(r=>r.tematica));
+    llenarFiltro('etapa',recursos.flatMap(r=>r.etapas || []));
+    llenarFiltro('herramienta',recursos.map(r=>r.herramienta));
+
+    renderizar();
+
+  } catch(error) {
+    $('contador').textContent = 'Error de carga';
+    $('tarjetas').replaceChildren();
+
+    const aviso = crearElemento('div','vacio');
+    aviso.appendChild(crearElemento('h3','','No se pudieron cargar los recursos'));
+    aviso.appendChild(crearElemento('p','','Inténtalo de nuevo en unos minutos.'));
+    $('tarjetas').appendChild(aviso);
+
+    console.error(error);
+  }
+}
+
+['busqueda','tema','etapa','herramienta'].forEach(id=>{
+  $(id).addEventListener(
+    id === 'busqueda' ? 'input' : 'change',
+    renderizar
+  );
+});
+
+iniciar();
+</script>
 </body>
 </html>
