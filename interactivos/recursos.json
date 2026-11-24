@@ -1,23 +1,10 @@
 {
-  "actualizado": "2026-11-24T22:51:38.071Z",
+  "actualizado": "2026-11-24T23:06:34.756Z",
   "recursos": [
     {
-      "titulo": "Pasapalabra de Navidad",
-      "autor": "",
-      "compartidoPor": "maristas",
-      "esAutor": false,
-      "tematica": "Adviento y Navidad",
-      "etapas": [
-        "Primaria"
-      ],
-      "herramienta": "Genially",
-      "enlace": "https://view.genially.com/61a74167238e570d68fb83b6",
-      "portada": "https://thumbnails.genially.com/5bdb269fa302b9520da82836/screenshots/b4620b95-5340-4aa7-94c1-846d1e7c5014.jpg"
-    },
-    {
       "titulo": "Sopa de letras Navidad",
-      "autor": "",
-      "compartidoPor": "educaplay",
+      "autor": "educaplay.com",
+      "compartidoPor": "educaplay público",
       "esAutor": false,
       "tematica": "Adviento y Navidad",
       "etapas": [
@@ -41,7 +28,7 @@
       "portada": ""
     },
     {
-      "titulo": "Prueba",
+      "titulo": "Pasapalabra de Navidad",
       "autor": "porsitevale.com",
       "compartidoPor": "relisevilla",
       "esAutor": false,
