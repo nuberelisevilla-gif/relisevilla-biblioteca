@@ -194,6 +194,55 @@ input:focus,select:focus,a:focus-visible {
   font-size: 55px;
   background: linear-gradient(135deg, #e5f0fc, #d4e5f5);
 }
+  
+.portada-alternativa {
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
+
+.simbolo-portada {
+  font-size: 54px;
+  line-height: 1;
+}
+
+.nombre-plataforma {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  overflow-wrap: anywhere;
+}
+
+.portada-kahoot {
+  background: linear-gradient(135deg,#46178f,#7c42c8);
+}
+
+.portada-genially {
+  background: linear-gradient(135deg,#5725a8,#a14be4);
+}
+
+.portada-educaplay {
+  background: linear-gradient(135deg,#126aa2,#29a5cb);
+}
+
+.portada-wordwall {
+  background: linear-gradient(135deg,#1767b0,#39a4eb);
+}
+
+.portada-wayground {
+  background: linear-gradient(135deg,#40318e,#8164d9);
+}
+
+.portada-canva {
+  background: linear-gradient(135deg,#00a9b8,#7855d9);
+}
+
+.portada-generica {
+  background: linear-gradient(135deg,#173e68,#327eaf);
+}
+
 </style>
 </head>
 
@@ -290,16 +339,37 @@ function normalizar(valor) {
     .toLowerCase();
 }
 
+
 function iconoHerramienta(nombre) {
   const n = normalizar(nombre);
-  if(n.includes('kahoot')) return '🎯';
-  if(n.includes('genially')) return '✨';
-  if(n.includes('wordwall')) return '🧩';
-  if(n.includes('educaplay')) return '🎲';
-  if(n.includes('canva')) return '🎨';
-  if(n.includes('forms')) return '📝';
+
+  if (n.includes('kahoot')) return '🎯';
+  if (n.includes('genially')) return '✨';
+  if (n.includes('wordwall')) return '🧩';
+  if (n.includes('educaplay')) return '🎲';
+  if (n.includes('canva')) return '🎨';
+  if (n.includes('wayground') || n.includes('quizziz') ||
+      n.includes('quizizz')) return '🚀';
+  if (n.includes('learningapps')) return '🧠';
+  if (n.includes('forms')) return '📝';
+
   return '🎮';
 }
+
+function estiloPortadaAlternativa(nombre) {
+  const n = normalizar(nombre);
+
+  if (n.includes('kahoot')) return 'portada-kahoot';
+  if (n.includes('genially')) return 'portada-genially';
+  if (n.includes('educaplay')) return 'portada-educaplay';
+  if (n.includes('wordwall')) return 'portada-wordwall';
+  if (n.includes('wayground') || n.includes('quizziz') ||
+      n.includes('quizizz')) return 'portada-wayground';
+  if (n.includes('canva')) return 'portada-canva';
+
+  return 'portada-generica';
+}
+
 
 function crearElemento(etiqueta,clase,contenido) {
   const el = document.createElement(etiqueta);
@@ -332,11 +402,28 @@ imagen.alt = 'Portada de ' + texto(recurso.titulo);
 imagen.loading = 'lazy';
 imagen.referrerPolicy = 'no-referrer';
 
+
 const alternativa = crearElemento(
   'div',
-  'portada-alternativa',
+  'portada-alternativa ' +
+    estiloPortadaAlternativa(recurso.herramienta)
+);
+
+const simbolo = crearElemento(
+  'span',
+  'simbolo-portada',
   iconoHerramienta(recurso.herramienta)
 );
+
+const nombrePlataforma = crearElemento(
+  'span',
+  'nombre-plataforma',
+  texto(recurso.herramienta) || 'Recurso interactivo'
+);
+
+alternativa.appendChild(simbolo);
+alternativa.appendChild(nombrePlataforma);
+
 
 const mostrarAlternativa = () => {
   imagen.style.display = 'none';
