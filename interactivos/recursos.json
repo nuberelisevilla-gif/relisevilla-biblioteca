@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T17:51:34.919Z",
+  "actualizado": "2026-11-25T18:06:36.938Z",
   "recursos": [
     {
       "titulo": "Sopa de letras Navidad",
@@ -39,6 +39,19 @@
       "herramienta": "Genially",
       "enlace": "https://view.genially.com/61a74167238e570d68fb83b6",
       "portada": "https://thumbnails.genially.com/5bdb269fa302b9520da82836/screenshots/b4620b95-5340-4aa7-94c1-846d1e7c5014.jpg"
+    },
+    {
+      "titulo": "La pista bíblica",
+      "autor": "@belen_reli",
+      "compartidoPor": "@belen_reli",
+      "esAutor": true,
+      "tematica": "La Biblia",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Blooket",
+      "enlace": "https://dashboard.blooket.com/set/6aecef42d7d472cc05f60be8",
+      "portada": ""
     }
   ]
 }
