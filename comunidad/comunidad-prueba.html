@@ -71,6 +71,7 @@
 .modal-panel textarea{min-height:130px;resize:vertical}.modal-acciones{display:flex;gap:10px;justify-content:flex-end;margin-top:17px}
 .boton-cancelar{background:#edf3f7;color:#143d65;border:0;border-radius:10px;padding:11px 15px;cursor:pointer}
 .estado-aviso{font-size:13px;line-height:1.5;margin-top:12px}
+.aviso-confirmacion{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:110;background:#143d65;color:#fff;padding:14px 20px;border-radius:12px;box-shadow:0 6px 25px #0003;text-align:center;max-width:calc(100% - 32px);font-size:14px}.aviso-confirmacion[hidden]{display:none!important}
 @media(max-width:600px){.aviso-flotante{right:10px;bottom:10px}.recursos-perfil-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.recurso-perfil-card .imagen{height:115px}}
 </style>
 </head>
@@ -82,6 +83,7 @@
 <section><h2>🤝 Nuestros colaboradores</h2><div id="colaboradoras" class="grid"></div></section>
 </div><section id="vista-perfil" class="vista-perfil" hidden aria-live="polite"></section><footer class="pie">Gracias a todos los docentes que comparten generosamente su trabajo. Cada recurso conserva el reconocimiento de quien lo comparte.<br>RELISEVILLA · Compartir también es enseñar.</footer>
 </main>
+<div id="aviso-confirmacion" class="aviso-confirmacion" role="status" aria-live="polite" hidden>Gracias por ayudarnos. Tu aviso se ha enviado para su revisión. 💙 <button type="button" id="ocultar-confirmacion" aria-label="Cerrar mensaje" style="background:transparent;border:0;color:white;cursor:pointer;font-size:19px;margin-left:10px">×</button></div>
 <button class="aviso-flotante" type="button" id="abrir-aviso">⚠ ¿Has encontrado un error?</button>
 <div class="modal-fondo" id="aviso-fondo" hidden>
  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="aviso-titulo">
@@ -333,7 +335,8 @@ async function cargarInteractivosPerfil(nombre){
 // identificando explícitamente la procedencia como Comunidad Docente.
 const URL_SERVICIO_AVISOS='https://script.google.com/macros/s/AKfycbzVxj0StxWUCy4REUUQbNNbmC-KwTp92LDktLoVVVXSIwpznEBiBoAulUc2IxLOx0Dr5g/exec';
 const fondoAviso=document.getElementById('aviso-fondo');
-document.getElementById('abrir-aviso').addEventListener('click',()=>{fondoAviso.hidden=false;document.getElementById('aviso-estado').textContent='';document.getElementById('aviso-tipo').focus();});
+document.getElementById('ocultar-confirmacion').addEventListener('click',()=>{document.getElementById('aviso-confirmacion').hidden=true;});
+document.getElementById('abrir-aviso').addEventListener('click',()=>{document.getElementById('aviso-confirmacion').hidden=true;fondoAviso.hidden=false;document.getElementById('aviso-estado').textContent='';document.getElementById('aviso-tipo').focus();});
 function cerrarAviso(){fondoAviso.hidden=true;document.getElementById('abrir-aviso').focus();}
 document.getElementById('cerrar-aviso').addEventListener('click',cerrarAviso);
 fondoAviso.addEventListener('click',e=>{if(e.target===fondoAviso)cerrarAviso();});
@@ -341,15 +344,12 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!fondoAviso.hidden)
 document.getElementById('aviso-formulario').addEventListener('submit',async e=>{
  e.preventDefault();const form=e.currentTarget;if(!form.reportValidity())return;
  const boton=document.getElementById('enviar-aviso');const estado=document.getElementById('aviso-estado');boton.disabled=true;estado.textContent='Enviando solicitud...';
- try{await fetch(URL_SERVICIO_AVISOS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({origen:'Comunidad Docente',tipo:document.getElementById('aviso-tipo').value,descripcion:document.getElementById('aviso-descripcion').value.trim(),pagina:location.href})});estado.textContent='La solicitud se ha enviado, aunque no podemos confirmar automáticamente su recepción. Gracias por ayudarnos.';form.reset();}
+ try{await fetch(URL_SERVICIO_AVISOS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({origen:'Comunidad Docente',tipo:document.getElementById('aviso-tipo').value,descripcion:document.getElementById('aviso-descripcion').value.trim(),pagina:location.href})});form.reset();cerrarAviso();document.getElementById('aviso-confirmacion').hidden=false;}
  catch(err){estado.textContent='No se ha podido enviar. Comprueba tu conexión e inténtalo de nuevo.';}
  finally{boton.disabled=false;}
 });
 
 cargarComunidad();
-</script>
-</body>
-</html>
 </script>
 </body>
 </html>
