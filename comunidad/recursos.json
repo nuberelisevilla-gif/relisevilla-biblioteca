@@ -143,6 +143,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1ZLKrvYnoFotin2XbFoszBo-YisRE_fF4&sz=w400",
       "materiales": [
         {
+          "nombre": "CALENDARIO DE ADVIENTO ESTRELLAS MARIA.png",
+          "url": "https://drive.google.com/file/d/1JaLQyfAV-CEkBybbUMgCBrY1iI88H9M2/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1JaLQyfAV-CEkBybbUMgCBrY1iI88H9M2&sz=w700",
+          "tipo": "image/png",
+          "fechaOrden": 1795710491901,
+          "fecha": "26/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Corona Adviento colorear.pdf",
           "url": "https://drive.google.com/file/d/1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1h3rtoYE8KBcqh3iQK2Fp5Xtm9doUpjAW&sz=w700",
@@ -687,6 +696,17 @@
   ],
   "novedades": [
     {
+      "nombre": "CALENDARIO DE ADVIENTO ESTRELLAS MARIA.png",
+      "url": "https://drive.google.com/file/d/1JaLQyfAV-CEkBybbUMgCBrY1iI88H9M2/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1JaLQyfAV-CEkBybbUMgCBrY1iI88H9M2&sz=w700",
+      "tipo": "image/png",
+      "fechaOrden": 1795710491901,
+      "fecha": "26/11/2026",
+      "nuevo": true,
+      "autora": "@reyes_de_reli",
+      "instagram": "https://www.instagram.com/reyes_de_reli/"
+    },
+    {
       "nombre": "Pintar con los dedos.pdf",
       "url": "https://drive.google.com/file/d/1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R&sz=w700",
@@ -806,17 +826,6 @@
       "nuevo": true,
       "autora": "@profereli94",
       "instagram": "https://www.instagram.com/profereli94/"
-    },
-    {
-      "nombre": "PUZZLE Navideño ",
-      "url": "https://drive.google.com/file/d/1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1qMBegJfzOekOCt_I4p_RFcbPsIPca9dH&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795472476395,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@welenyreli",
-      "instagram": "https://www.instagram.com/welenyreli/"
     }
   ]
 }
