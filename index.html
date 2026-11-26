@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -380,6 +379,20 @@
     .novedades-vacio { color:var(--gris); font-size:14px; }
     @media (max-width:700px) { .novedades-lista { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:440px) { .novedades-lista { gap:10px; } .novedades .miniatura { height:120px; max-height:120px; } .novedades-encabezado h2 { font-size:20px; } }
+    /* AVISO DE ERRORES · RELISEVILLA */
+    .aviso-error-boton {position:fixed;right:22px;bottom:22px;z-index:1000;background:#15384e;color:#fff;border:0;border-radius:28px;padding:13px 18px;box-shadow:0 6px 20px #15384e44;cursor:pointer;font-weight:bold}
+    .aviso-error-fondo[hidden] {display:none}
+    .aviso-error-fondo {position:fixed;inset:0;z-index:1100;background:#142d3dc9;display:flex;align-items:center;justify-content:center;padding:18px}
+    .aviso-error-panel {background:#fff;border-radius:17px;padding:25px;max-width:470px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 14px 40px #0003}
+    .aviso-error-panel h2 {margin:0 0 10px;color:#15384e;font-size:22px}
+    .aviso-error-panel label {display:block;font-weight:bold;margin:14px 0 5px}
+    .aviso-error-panel select,.aviso-error-panel textarea {width:100%;border:1px solid #bacbd8;border-radius:8px;padding:10px;font:inherit}
+    .aviso-error-panel textarea {min-height:115px;resize:vertical}
+    .aviso-error-acciones {display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
+    .aviso-error-acciones button {border:0;border-radius:9px;padding:11px 15px;cursor:pointer}
+    .aviso-error-cancelar {background:#eaf3f8;color:#15384e}
+    .aviso-error-enviar {background:#28617c;color:#fff}
+    @media(max-width:440px){.aviso-error-boton{right:12px;bottom:12px;padding:11px 14px;font-size:13px}}
   </style>
 </head>
 
@@ -497,7 +510,78 @@
 
   </main>
 
+  <!-- Avisos de errores de Material imprimible -->
+  <button type="button" class="aviso-error-boton" id="abrir-aviso-error">⚠ ¿Has encontrado un error?</button>
+  <div class="aviso-error-fondo" id="fondo-aviso-error" hidden>
+    <section class="aviso-error-panel" role="dialog" aria-modal="true" aria-labelledby="titulo-aviso-error">
+      <h2 id="titulo-aviso-error">Ayúdanos a mejorar RELISEVILLA</h2>
+      <p>Cuéntanos qué ha ocurrido para que podamos revisarlo.</p>
+      <form id="formulario-aviso-error">
+        <label for="tipo-aviso-error">¿Qué problema has encontrado?</label>
+        <select id="tipo-aviso-error" required>
+          <option value="">Selecciona una opción</option>
+          <option>Enlace que no funciona</option>
+          <option>No puedo abrir un recurso</option>
+          <option>Problema con un perfil</option>
+          <option>Otro error</option>
+        </select>
+        <label for="detalle-aviso-error">Explícanos el problema</label>
+        <textarea id="detalle-aviso-error" required minlength="10" maxlength="2000" placeholder="Indica el nombre del recurso y qué sucede..."></textarea>
+        <p style="font-size:12px;color:#6c7e8c">El aviso se enviará al equipo de RELISEVILLA. Por limitaciones técnicas, la página no puede confirmar automáticamente su recepción.</p>
+        <div class="aviso-error-acciones">
+          <button type="button" class="aviso-error-cancelar" id="cerrar-aviso-error">Cancelar</button>
+          <button type="submit" class="aviso-error-enviar">Enviar aviso</button>
+        </div>
+        <p id="resultado-aviso-error" role="status" aria-live="polite" style="font-size:13px;margin:10px 0 0;"></p>
+      </form>
+    </section>
+  </div>
+
   <script>
+    // Envío al servicio independiente de Material imprimible.
+    // Con no-cors no se puede comprobar la respuesta del servidor.
+    const URL_AVISOS_MATERIAL = 'https://script.google.com/macros/s/AKfycbzVxj0StxWUCy4REUUQbNNbmC-KwTp92LDktLoVVVXSIwpznEBiBoAulUc2IxLOx0Dr5g/exec';
+    const fondoAvisoError = document.getElementById('fondo-aviso-error');
+    const botonAbrirAviso = document.getElementById('abrir-aviso-error');
+    const botonCerrarAviso = document.getElementById('cerrar-aviso-error');
+    const formularioAviso = document.getElementById('formulario-aviso-error');
+    const resultadoAviso = document.getElementById('resultado-aviso-error');
+    const botonEnviarAviso = formularioAviso.querySelector('[type="submit"]');
+    botonAbrirAviso.addEventListener('click', () => {
+      fondoAvisoError.hidden = false;
+      document.getElementById('tipo-aviso-error').focus();
+    });
+    function cerrarAvisoError() { fondoAvisoError.hidden = true; botonAbrirAviso.focus(); }
+    botonCerrarAviso.addEventListener('click', cerrarAvisoError);
+    fondoAvisoError.addEventListener('click', e => { if (e.target === fondoAvisoError) cerrarAvisoError(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !fondoAvisoError.hidden) cerrarAvisoError(); });
+    formularioAviso.addEventListener('submit', async e => {
+      e.preventDefault();
+      const tipo = document.getElementById('tipo-aviso-error').value;
+      const descripcion = document.getElementById('detalle-aviso-error').value.trim();
+      if (!formularioAviso.reportValidity() || descripcion.length < 10) return;
+      botonEnviarAviso.disabled = true;
+      resultadoAviso.textContent = 'Enviando solicitud…';
+      try {
+        await fetch(URL_AVISOS_MATERIAL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+          body: JSON.stringify({
+            origen: 'Material imprimible',
+            tipo,
+            descripcion,
+            pagina: location.href
+          })
+        });
+        resultadoAviso.textContent = 'La solicitud se ha enviado, pero no podemos confirmar automáticamente su recepción. Si el problema continúa, puedes volver a intentarlo más tarde.';
+      } catch (error) {
+        resultadoAviso.textContent = 'No se ha podido enviar la solicitud. Comprueba tu conexión e inténtalo de nuevo.';
+      } finally {
+        botonEnviarAviso.disabled = false;
+      }
+    });
+
     let materiales = [];
     let categoriaActual = 'Todos';
 
