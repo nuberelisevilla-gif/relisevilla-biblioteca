@@ -49,16 +49,56 @@
   color: #65798b;
   font-size: 13px;
 }
+
+/* Mejoras de perfiles y avisos - solo versión de pruebas */
+.abrir-perfil,.boton-accion{border:0;border-radius:10px;background:#17649c;color:white;font:inherit;font-weight:bold;padding:11px 15px;cursor:pointer}
+.abrir-perfil{width:100%;margin:12px 0 0}.abrir-perfil:hover,.boton-accion:hover{background:#104c77}
+.vista-perfil[hidden],.vista-principal[hidden],.modal-fondo[hidden]{display:none!important}
+.volver-comunidad{border:1px solid #bfd5e5;background:white;color:#174e77;border-radius:10px;padding:12px 16px;font-weight:bold;cursor:pointer;margin-bottom:18px}
+.cabecera-perfil{background:white;border:1px solid #e2e9f1;border-radius:18px;padding:22px;margin-bottom:20px}
+.perfil-titulo{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.perfil-titulo h2{margin:0 0 6px}
+.panel-recursos{margin-top:22px}.panel-recursos h3{font-size:21px}
+.filtro-perfil{width:100%;padding:12px;border:1px solid #bfd5e5;border-radius:10px;margin-bottom:14px;font:inherit}
+.recursos-perfil-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:15px}
+.recurso-perfil-card{background:white;border:1px solid #e2e9f1;border-radius:14px;overflow:hidden}
+.recurso-perfil-card .imagen{height:150px}.recurso-perfil-card .imagen img{object-fit:contain;padding:7px}
+.recurso-perfil-card .contenido{padding:14px}.recurso-perfil-card .titulo a{color:#17649c}
+.aviso-flotante{position:fixed;right:18px;bottom:18px;z-index:90;border:0;border-radius:40px;background:#143d65;color:white;padding:13px 18px;font:inherit;font-size:13px;font-weight:bold;cursor:pointer;box-shadow:0 5px 22px #143d6540}
+.modal-fondo{position:fixed;inset:0;background:#142b40b8;z-index:100;display:flex;align-items:center;justify-content:center;padding:15px}
+.modal-panel{width:min(100%,510px);max-height:92vh;overflow:auto;background:white;border-radius:17px;padding:24px;box-shadow:0 12px 40px #0003}
+.modal-panel h2{margin:0 0 10px}.modal-panel label{display:block;font-weight:bold;margin:15px 0 6px}
+.modal-panel select,.modal-panel textarea{width:100%;padding:12px;border:1px solid #bccddd;border-radius:9px;font:inherit}
+.modal-panel textarea{min-height:130px;resize:vertical}.modal-acciones{display:flex;gap:10px;justify-content:flex-end;margin-top:17px}
+.boton-cancelar{background:#edf3f7;color:#143d65;border:0;border-radius:10px;padding:11px 15px;cursor:pointer}
+.estado-aviso{font-size:13px;line-height:1.5;margin-top:12px}
+.aviso-confirmacion{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:110;background:#143d65;color:#fff;padding:14px 20px;border-radius:12px;box-shadow:0 6px 25px #0003;text-align:center;max-width:calc(100% - 32px);font-size:14px}.aviso-confirmacion[hidden]{display:none!important}
+@media(max-width:600px){.aviso-flotante{right:10px;bottom:10px}.recursos-perfil-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.recurso-perfil-card .imagen{height:115px}}
 </style>
 </head>
 <body>
 <main class="contenedor">
 <header class="cabecera"><small>RELISEVILLA · Comunidad docente</small><h1>Docentes que inspiran</h1><p>Compartimos para crecer juntos. Descubre los recursos, experiencias e ideas de docentes de Religión Católica que enriquecen nuestras aulas con su creatividad.</p></header>
 <div id="estado" class="estado" role="status" aria-live="polite">Cargando comunidad docente...</div>
-<section><h2>✨ Últimos recursos compartidos</h2><div id="novedades" class="grid grid-novedades"></div></section>
+<div id="vista-principal" class="vista-principal"><section><h2>✨ Últimos recursos compartidos</h2><div id="novedades" class="grid grid-novedades"></div></section>
 <section><h2>🤝 Nuestros colaboradores</h2><div id="colaboradoras" class="grid"></div></section>
-<footer class="pie">Gracias a todos los docentes que comparten generosamente su trabajo. Cada recurso conserva el reconocimiento de quien lo comparte.<br>RELISEVILLA · Compartir también es enseñar.</footer>
+</div><section id="vista-perfil" class="vista-perfil" hidden aria-live="polite"></section><footer class="pie">Gracias a todos los docentes que comparten generosamente su trabajo. Cada recurso conserva el reconocimiento de quien lo comparte.<br>RELISEVILLA · Compartir también es enseñar.</footer>
 </main>
+<div id="aviso-confirmacion" class="aviso-confirmacion" role="status" aria-live="polite" hidden>Gracias por ayudarnos. Tu aviso se ha enviado para su revisión. 💙 <button type="button" id="ocultar-confirmacion" aria-label="Cerrar mensaje" style="background:transparent;border:0;color:white;cursor:pointer;font-size:19px;margin-left:10px">×</button></div>
+<button class="aviso-flotante" type="button" id="abrir-aviso">⚠ ¿Has encontrado un error?</button>
+<div class="modal-fondo" id="aviso-fondo" hidden>
+ <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="aviso-titulo">
+  <h2 id="aviso-titulo">Ayúdanos a mejorar RELISEVILLA</h2>
+  <p>Cuéntanos qué ha ocurrido para que podamos revisarlo.</p>
+  <form id="aviso-formulario">
+   <label for="aviso-tipo">¿Qué problema has encontrado?</label>
+   <select id="aviso-tipo" required><option value="">Selecciona una opción</option><option>Enlace que no funciona</option><option>No puedo abrir un recurso</option><option>Problema con un perfil</option><option>Otro error</option></select>
+   <label for="aviso-descripcion">Explícanos el problema</label>
+   <textarea id="aviso-descripcion" required minlength="10" maxlength="2000" placeholder="Indica el nombre del recurso y qué sucede..."></textarea>
+   <div class="modal-acciones"><button class="boton-cancelar" type="button" id="cerrar-aviso">Cancelar</button><button class="boton-accion" id="enviar-aviso" type="submit">📨 Enviar aviso</button></div>
+   <p id="aviso-estado" class="estado-aviso" role="status" aria-live="polite"></p>
+  </form>
+ </div>
+</div>
 <script>
 'use strict';
 const LIMITE_MATERIALES=6;
@@ -69,7 +109,7 @@ function imagenHTML(url,clase,alternativo){ return url
          class="${escapar(clase)}"
          alt="${escapar(alternativo)}"
          loading="lazy"
-         onerror="this.remove()">`
+         onerror="this.outerHTML='<span aria-hidden=&quot;true&quot;>📄</span>'">`
     : '';
 }
 function tarjetaRecurso(r){const imagen=r.miniatura?imagenHTML(r.miniatura,'',r.nombre):'<span aria-hidden="true">📄</span>';const autora=r.instagram?`<a href="${urlSegura(r.instagram)}" target="_blank" rel="noopener noreferrer">${escapar(r.autora)}</a>`:escapar(r.autora);return `<article class="tarjeta"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer" aria-label="Abrir ${escapar(r.nombre)}"><div class="imagen">${imagen}</div></a><div class="contenido">${r.nuevo?'<span class="nuevo">NUEVO</span>':''}<div class="titulo"><a href="${urlSegura(r.url)}" target="_blank" rel="noopener noreferrer">${escapar(r.nombre)}</a></div><div class="autor">Compartido por ${autora}</div><div class="fecha">${escapar(r.fecha)}</div></div></article>`;}
@@ -130,6 +170,7 @@ function tarjetaColaboradora(c) {
         </div>
       </div>
 
+      <button class="abrir-perfil" type="button" data-perfil="${escapar(c.nombre)}">👤 Visitar perfil</button>
       ${buscador}
 
       <div class="lista-materiales">${materiales}</div>
@@ -248,7 +289,66 @@ contenedorColaboradores.addEventListener('input', function(event) {
 });
 
 
-async function cargarComunidad(){const estado=document.getElementById('estado');try{const respuesta=await fetch('./recursos.json',{cache:'no-store'});if(!respuesta.ok)throw new Error('El catálogo aún no está disponible ('+respuesta.status+').');const datos=await respuesta.json();if(!Array.isArray(datos.novedades)||!Array.isArray(datos.colaboradoras))throw new Error('El catálogo no tiene el formato esperado.');document.getElementById('novedades').innerHTML=datos.novedades.length?datos.novedades.map(tarjetaRecurso).join(''):'<p class="vacio">Próximamente, nuevos recursos.</p>';document.getElementById('colaboradoras').innerHTML=datos.colaboradoras.length?datos.colaboradoras.map(tarjetaColaboradora).join(''):'<p class="vacio">Próximamente conocerás a nuestros colaboradores.</p>';estado.textContent='';}catch(error){estado.textContent='No se ha podido cargar la comunidad docente. '+error.message;}}
+let datosComunidadActual = null;
+async function cargarComunidad(){const estado=document.getElementById('estado');try{const respuesta=await fetch('./recursos.json',{cache:'no-store'});if(!respuesta.ok)throw new Error('El catálogo aún no está disponible ('+respuesta.status+').');const datos=await respuesta.json();datosComunidadActual=datos;if(!Array.isArray(datos.novedades)||!Array.isArray(datos.colaboradoras))throw new Error('El catálogo no tiene el formato esperado.');document.getElementById('novedades').innerHTML=datos.novedades.length?datos.novedades.map(tarjetaRecurso).join(''):'<p class="vacio">Próximamente, nuevos recursos.</p>';document.getElementById('colaboradoras').innerHTML=datos.colaboradoras.length?datos.colaboradoras.map(tarjetaColaboradora).join(''):'<p class="vacio">Próximamente conocerás a nuestros colaboradores.</p>';estado.textContent='';const nombreEnlace=new URLSearchParams(location.search).get('perfil');if(nombreEnlace) abrirPerfil(nombreEnlace,false);}catch(error){estado.textContent='No se ha podido cargar la comunidad docente. '+error.message;}}
+
+// Perfiles individuales: todos los datos imprimibles siguen saliendo de recursos.json.
+const URL_CATALOGO_INTERACTIVOS='https://nuberelisevilla-gif.github.io/relisevilla-biblioteca/interactivos/recursos.json';
+let cacheInteractivos=null;
+function normalizarAutor(v){return String(v||'').trim().toLocaleLowerCase('es').replace(/^@/,'').replace(/\s+/g,'');}
+function autoriaPropia(r){return r.esAutor===true || (typeof r.esAutor==='string' && /^(sí|si|true|yes|1)$/i.test(r.esAutor.trim()));}
+function perteneceAutor(r,nombre){return autoriaPropia(r) && [r.compartidoPor,r.autor].some(v=>normalizarAutor(v)===normalizarAutor(nombre));}
+function tarjetaPerfilRecurso(r,interactivo=false){
+ const nombre=interactivo?(r.titulo||'Recurso interactivo'):(r.nombre||'Material');
+ const enlace=interactivo?r.enlace:r.url;
+ const imagen=interactivo?r.portada:r.miniatura;
+ return `<article class="recurso-perfil-card" data-busqueda="${escapar(nombre.toLocaleLowerCase('es'))}"><a href="${urlSegura(enlace)}" target="_blank" rel="noopener noreferrer"><div class="imagen">${imagen?imagenHTML(imagen,'',nombre):'<span aria-hidden="true">'+(interactivo?'🎮':'📄')+'</span>'}</div></a><div class="contenido"><div class="titulo"><a href="${urlSegura(enlace)}" target="_blank" rel="noopener noreferrer">${escapar(nombre)}</a></div>${interactivo&&r.herramienta?`<div class="fecha">${escapar(r.herramienta)}</div>`:''}</div></article>`;
+}
+function abrirPerfil(nombre,actualizarUrl=true){
+ const colaboradora=datosComunidadActual?.colaboradoras?.find(c=>c.nombre===nombre);
+ if(!colaboradora)return;
+ document.getElementById('vista-principal').hidden=true;
+ const vista=document.getElementById('vista-perfil');vista.hidden=false;
+ const lista=Array.isArray(colaboradora.materiales)?colaboradora.materiales:[];
+ const avatar=colaboradora.avatar?imagenHTML(colaboradora.avatar,'avatar',colaboradora.nombre):'<div class="avatar avatar-vacio">✦</div>';
+ const links=[['📸 Instagram',colaboradora.instagram],['🌐 Blog',colaboradora.blog],['💬 WhatsApp',colaboradora.whatsapp||colaboradora.whatsappGrupo||colaboradora.whatsappCanal]].filter(x=>x[1]).map(([titulo,url])=>`<a class="instagram" href="${urlSegura(url)}" target="_blank" rel="noopener noreferrer">${titulo}</a>`).join('');
+ vista.innerHTML=`<button type="button" class="volver-comunidad">← Volver a la comunidad</button><div class="cabecera-perfil"><div class="perfil-titulo">${avatar}<div><h2>${escapar(colaboradora.nombre)}</h2><p>${lista.length} materiales imprimibles compartidos</p>${links}</div></div></div><div class="panel-recursos"><h3>📄 Materiales imprimibles</h3><input class="filtro-perfil" type="search" placeholder="🔎 Buscar materiales imprimibles..." aria-label="Buscar materiales imprimibles"><div class="recursos-perfil-grid">${lista.length?lista.map(r=>tarjetaPerfilRecurso(r)).join(''):'<p class="vacio">Próximamente, nuevos recursos.</p>'}</div><p class="sin-resultados" hidden>No hay resultados para esta búsqueda.</p></div><div class="panel-recursos" id="panel-interactivos"><h3>🎮 Recursos interactivos</h3><p class="estado">Cargando recursos interactivos...</p></div>`;
+ if(actualizarUrl)history.pushState({perfil:nombre},'',location.pathname+'?perfil='+encodeURIComponent(nombre));
+ window.scrollTo({top:0,behavior:'instant'});
+ cargarInteractivosPerfil(nombre);
+}
+function volverComunidad(actualizarUrl=true){document.getElementById('vista-perfil').hidden=true;document.getElementById('vista-principal').hidden=false;if(actualizarUrl)history.pushState({},'',location.pathname);window.scrollTo({top:0,behavior:'instant'});}
+document.getElementById('colaboradoras').addEventListener('click',e=>{const b=e.target.closest('.abrir-perfil');if(b)abrirPerfil(b.dataset.perfil);});
+document.getElementById('vista-perfil').addEventListener('click',e=>{if(e.target.closest('.volver-comunidad'))volverComunidad();});
+document.getElementById('vista-perfil').addEventListener('input',e=>{if(!e.target.matches('.filtro-perfil'))return;const panel=e.target.closest('.panel-recursos');const filtro=e.target.value.trim().toLocaleLowerCase('es');let total=0;panel.querySelectorAll('.recurso-perfil-card').forEach(t=>{const coincide=t.dataset.busqueda.includes(filtro);t.hidden=!coincide;if(coincide)total++;});const aviso=panel.querySelector('.sin-resultados');if(aviso)aviso.hidden=total>0;});
+window.addEventListener('popstate',()=>{const nombre=new URLSearchParams(location.search).get('perfil');if(nombre)abrirPerfil(nombre,false);else volverComunidad(false);});
+async function cargarInteractivosPerfil(nombre){
+ const panel=document.getElementById('panel-interactivos');
+ try{
+  if(!cacheInteractivos){const r=await fetch(URL_CATALOGO_INTERACTIVOS,{cache:'no-store'});if(!r.ok)throw Error('No disponible');const json=await r.json();cacheInteractivos=Array.isArray(json)?json:Array.isArray(json.recursos)?json.recursos:Array.isArray(json.materiales)?json.materiales:[];}
+  if(document.getElementById('vista-perfil').hidden||!document.querySelector('#vista-perfil h2')?.textContent.includes(nombre))return;
+  const lista=cacheInteractivos.filter(r=>perteneceAutor(r,nombre));
+  panel.innerHTML=`<h3>🎮 Recursos interactivos</h3>${lista.length?`<input class="filtro-perfil" type="search" placeholder="🔎 Buscar recursos interactivos..." aria-label="Buscar recursos interactivos"><div class="recursos-perfil-grid">${lista.map(r=>tarjetaPerfilRecurso(r,true)).join('')}</div><p class="sin-resultados" hidden>No hay resultados para esta búsqueda.</p>`:'<p class="vacio">Esta colaboradora todavía no tiene recursos interactivos propios publicados.</p>'}`;
+ }catch(err){panel.innerHTML='<h3>🎮 Recursos interactivos</h3><p class="vacio">No se han podido cargar los interactivos en este momento.</p>';}
+}
+// Formulario de avisos. Reutiliza el servicio de avisos ya publicado para Material imprimible,
+// identificando explícitamente la procedencia como Comunidad Docente.
+const URL_SERVICIO_AVISOS='https://script.google.com/macros/s/AKfycbzVxj0StxWUCy4REUUQbNNbmC-KwTp92LDktLoVVVXSIwpznEBiBoAulUc2IxLOx0Dr5g/exec';
+const fondoAviso=document.getElementById('aviso-fondo');
+document.getElementById('ocultar-confirmacion').addEventListener('click',()=>{document.getElementById('aviso-confirmacion').hidden=true;});
+document.getElementById('abrir-aviso').addEventListener('click',()=>{document.getElementById('aviso-confirmacion').hidden=true;fondoAviso.hidden=false;document.getElementById('aviso-estado').textContent='';document.getElementById('aviso-tipo').focus();});
+function cerrarAviso(){fondoAviso.hidden=true;document.getElementById('abrir-aviso').focus();}
+document.getElementById('cerrar-aviso').addEventListener('click',cerrarAviso);
+fondoAviso.addEventListener('click',e=>{if(e.target===fondoAviso)cerrarAviso();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!fondoAviso.hidden)cerrarAviso();});
+document.getElementById('aviso-formulario').addEventListener('submit',async e=>{
+ e.preventDefault();const form=e.currentTarget;if(!form.reportValidity())return;
+ const boton=document.getElementById('enviar-aviso');const estado=document.getElementById('aviso-estado');boton.disabled=true;estado.textContent='Enviando solicitud...';
+ try{await fetch(URL_SERVICIO_AVISOS,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify({origen:'Comunidad Docente',tipo:document.getElementById('aviso-tipo').value,descripcion:document.getElementById('aviso-descripcion').value.trim(),pagina:location.href})});form.reset();cerrarAviso();document.getElementById('aviso-confirmacion').hidden=false;}
+ catch(err){estado.textContent='No se ha podido enviar. Comprueba tu conexión e inténtalo de nuevo.';}
+ finally{boton.disabled=false;}
+});
+
 cargarComunidad();
 </script>
 </body>
