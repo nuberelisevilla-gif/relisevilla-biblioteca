@@ -639,6 +639,9 @@
       return Boolean(recurso.colaborador) || normalizar(obtenerCategoria(recurso)) === normalizar('Material de colaboradores');
     }
     function etiquetasRecurso(recurso) {
+      if (Array.isArray(recurso.categorias) && recurso.categorias.length) {
+  return [...new Set(recurso.categorias)];
+}
       const base = obtenerCategoria(recurso);
       // Campo futuro generado en Apps Script: correcciones y reglas ya consolidadas.
       if (Array.isArray(recurso.categorias)) {
