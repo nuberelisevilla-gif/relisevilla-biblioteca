@@ -71,6 +71,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1NRdZOOGRUbrVqghoUI9Xn_coAcUCxlll&sz=w400",
       "materiales": [
         {
+          "nombre": "Pasitos hacia la navidad",
+          "url": "https://drive.google.com/file/d/1lAFUt44rWJKvYGFjJsAdqRgKKqWManGx/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1lAFUt44rWJKvYGFjJsAdqRgKKqWManGx&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795769488018,
+          "fecha": "27/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Coronasadviento.pdf",
           "url": "https://drive.google.com/file/d/1-q3C5J7oNjW2TONkq_7Nl7oB75rYzNJr/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1-q3C5J7oNjW2TONkq_7Nl7oB75rYzNJr&sz=w700",
@@ -696,6 +705,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Pasitos hacia la navidad",
+      "url": "https://drive.google.com/file/d/1lAFUt44rWJKvYGFjJsAdqRgKKqWManGx/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1lAFUt44rWJKvYGFjJsAdqRgKKqWManGx&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795769488018,
+      "fecha": "27/11/2026",
+      "nuevo": true,
+      "autora": "@maestraarc",
+      "instagram": "https://www.instagram.com/maestraarc/"
+    },
+    {
       "nombre": "CALENDARIO DE ADVIENTO ESTRELLAS MARIA.png",
       "url": "https://drive.google.com/file/d/1JaLQyfAV-CEkBybbUMgCBrY1iI88H9M2/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1JaLQyfAV-CEkBybbUMgCBrY1iI88H9M2&sz=w700",
@@ -815,17 +835,6 @@
       "nuevo": true,
       "autora": "@maestraarc",
       "instagram": "https://www.instagram.com/maestraarc/"
-    },
-    {
-      "nombre": "BINGO NAVIDAD.pdf",
-      "url": "https://drive.google.com/file/d/1sS943syy0RwErV8BMGaTLGKc0eaaVukQ/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1sS943syy0RwErV8BMGaTLGKc0eaaVukQ&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795473032113,
-      "fecha": "23/11/2026",
-      "nuevo": true,
-      "autora": "@profereli94",
-      "instagram": "https://www.instagram.com/profereli94/"
     }
   ]
 }
