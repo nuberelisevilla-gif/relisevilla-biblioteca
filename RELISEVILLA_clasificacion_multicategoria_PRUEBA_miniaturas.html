@@ -841,8 +841,8 @@
 
     // Catálogo público: prueba de clasificación virtual sobre el JSON existente.
     // La página no depende de google.script.run para mostrarse en móviles.
-    fetch('./recursos.json', { cache: 'no-store' })
-      .then(respuesta => {
+fetch('./recursos-prueba.json', { cache: 'no-store' })  
+  .then(respuesta => {
         if (!respuesta.ok) throw new Error('Catálogo pendiente de publicar');
         return respuesta.json();
       })
