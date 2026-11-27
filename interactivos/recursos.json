@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T16:51:36.839Z",
+  "actualizado": "2026-11-27T17:06:40.115Z",
   "recursos": [
     {
       "titulo": "Sopa de letras Navidad",
@@ -52,6 +52,58 @@
       "herramienta": "Blooket",
       "enlace": "https://dashboard.blooket.com/set/6aecef42d7d472cc05f60be8",
       "portada": ""
+    },
+    {
+      "titulo": "«De casilla en casilla… ¡hasta la estrellita!»",
+      "autor": "@relianaherrainz",
+      "compartidoPor": "@relianaherrainz",
+      "esAutor": true,
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://view.genially.com/6af0b8b6f22fe3c0e8f3a1e8",
+      "portada": "https://genially-thumbnails.genially.com/6af0b8b6f22fe3c0e8f3a1e8.png?ts=1795102222076"
+    },
+    {
+      "titulo": "«¡Me preparo para la Navidad!»",
+      "autor": "@relianaherrainz",
+      "compartidoPor": "@relianaherrainz",
+      "esAutor": true,
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://view.genially.com/672254caac2836e9327a051e",
+      "portada": "https://genially-thumbnails.genially.com/672254caac2836e9327a051e.png?ts=1794931242115"
+    },
+    {
+      "titulo": "«El árbol de Adviento»",
+      "autor": "@relianaherrainz",
+      "compartidoPor": "@relianaherrainz",
+      "esAutor": true,
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://view.genially.com/656b3bbfd0d3fd0014e3cb04",
+      "portada": "https://genially-thumbnails.genially.com/656b3bbfd0d3fd0014e3cb04.png?ts=1794930515829"
+    },
+    {
+      "titulo": "Adviento-Primaria",
+      "autor": "@relianaherrainz",
+      "compartidoPor": "@relianaherrainz",
+      "esAutor": true,
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Html",
+      "enlace": "https://sapphire-pet-42.tiiny.site/",
+      "portada": "https://tiiny.host/assets/logo-purple-bg.png"
     }
   ]
 }
