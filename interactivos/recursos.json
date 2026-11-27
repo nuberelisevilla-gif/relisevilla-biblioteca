@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-27T20:06:35.383Z",
+  "actualizado": "2026-11-27T20:21:38.766Z",
   "recursos": [
     {
       "titulo": "Sopa de letras Navidad",
@@ -104,6 +104,32 @@
       "herramienta": "Html",
       "enlace": "https://sapphire-pet-42.tiiny.site/",
       "portada": "https://tiiny.host/assets/logo-purple-bg.png"
+    },
+    {
+      "titulo": "¡Me encanta la Navidad!",
+      "autor": "@relianaherrainz",
+      "compartidoPor": "@relianaherrainz",
+      "esAutor": true,
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://view.genially.com/672fc7d96fb1205e4fcac5e5",
+      "portada": "https://genially-thumbnails.genially.com/672fc7d96fb1205e4fcac5e5.png?ts=1794934217221"
+    },
+    {
+      "titulo": "¡Salvemos la Navidad",
+      "autor": "@relianaherrainz",
+      "compartidoPor": "@relianaherrainz",
+      "esAutor": true,
+      "tematica": "Adviento y Navidad",
+      "etapas": [
+        "Primaria"
+      ],
+      "herramienta": "Genially",
+      "enlace": "https://view.genially.com/6537eddeb4e6a400118f8ea1",
+      "portada": "https://genially-thumbnails.genially.com/6537eddeb4e6a400118f8ea1.png?ts=1795305122842"
     }
   ]
 }
