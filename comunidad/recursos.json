@@ -16,6 +16,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1S2bXBok4wA59HTPlGU09b0trbjoPRo_I&sz=w400",
       "materiales": [
         {
+          "nombre": "Aprendemos palabras en reli.pdf.pdf",
+          "url": "https://drive.google.com/file/d/1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795895118690,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Pintar con los dedos.pdf",
           "url": "https://drive.google.com/file/d/1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1g9Jd9cUnGHcSTbGyiYOrluUjCJOe_N7R&sz=w700",
@@ -956,6 +965,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Aprendemos palabras en reli.pdf.pdf",
+      "url": "https://drive.google.com/file/d/1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795895118690,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@anac.reli",
+      "instagram": "https://www.instagram.com/anac.reli/"
+    },
+    {
       "nombre": "dijiste Sí.pdf",
       "url": "https://drive.google.com/file/d/146mbaXy4T0MATRZN0p7AbLnlzlXyKIij/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=146mbaXy4T0MATRZN0p7AbLnlzlXyKIij&sz=w700",
@@ -1071,17 +1091,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=14CozLopQHrOljFTZ9JNl_9IEYQkOIrBB&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795798023047,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 4ºEP.pdf",
-      "url": "https://drive.google.com/file/d/1Gq9HRuosAIiKd16Rjys6R9LW4vjnFJu_/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1Gq9HRuosAIiKd16Rjys6R9LW4vjnFJu_&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798023034,
       "fecha": "27/11/2026",
       "nuevo": true,
       "autora": "@relianaherrainz",
