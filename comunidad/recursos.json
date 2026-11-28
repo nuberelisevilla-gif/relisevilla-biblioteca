@@ -477,6 +477,15 @@
       "materiales": [
         {
           "nombre": "dijiste Sí.pdf",
+          "url": "https://drive.google.com/file/d/146mbaXy4T0MATRZN0p7AbLnlzlXyKIij/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=146mbaXy4T0MATRZN0p7AbLnlzlXyKIij&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795877767423,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "dijiste Sí.pdf",
           "url": "https://drive.google.com/file/d/1iK8yMKADCVMPOGyzOZzaGQ7gRKfy0XYP/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1iK8yMKADCVMPOGyzOZzaGQ7gRKfy0XYP&sz=w700",
           "tipo": "application/pdf",
@@ -939,6 +948,17 @@
   ],
   "novedades": [
     {
+      "nombre": "dijiste Sí.pdf",
+      "url": "https://drive.google.com/file/d/146mbaXy4T0MATRZN0p7AbLnlzlXyKIij/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=146mbaXy4T0MATRZN0p7AbLnlzlXyKIij&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795877767423,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@welenyreli",
+      "instagram": "https://www.instagram.com/welenyreli/"
+    },
+    {
       "nombre": "Bordes pizarra.pdf",
       "url": "https://drive.google.com/file/d/1Lux3x9rVvTtGD_GC64CBqtSKqAwQdGmb/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1Lux3x9rVvTtGD_GC64CBqtSKqAwQdGmb&sz=w700",
@@ -1054,17 +1074,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1Gq9HRuosAIiKd16Rjys6R9LW4vjnFJu_&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795798023034,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 1ºEP.pdf",
-      "url": "https://drive.google.com/file/d/1neCXILaJkbgSTu_Akdfqg-zslPC_H4Ag/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1neCXILaJkbgSTu_Akdfqg-zslPC_H4Ag&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798023031,
       "fecha": "27/11/2026",
       "nuevo": true,
       "autora": "@relianaherrainz",
