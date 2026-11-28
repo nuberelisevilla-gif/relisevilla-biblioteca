@@ -610,9 +610,18 @@
         .toLowerCase();
     }
 
-    function obtenerCategoria(recurso) {
-      return recurso.categoria || 'General';
-    }
+    function obtenerCategorias(recurso) {
+  if (Array.isArray(recurso.categorias) &&
+      recurso.categorias.length > 0) {
+    return [...new Set(recurso.categorias)];
+  }
+
+  return [recurso.categoria || 'General'];
+}
+
+function obtenerCategoria(recurso) {
+  return obtenerCategorias(recurso)[0];
+}
 
     function dibujarCategorias() {
       categorias.replaceChildren();
@@ -628,8 +637,8 @@
       ];
 
       const nombresReales = [
-        ...new Set(materiales.map(obtenerCategoria))
-      ];
+  ...new Set(materiales.flatMap(obtenerCategorias))
+];
 
       nombresReales.sort((a, b) => {
         const posicion = nombre =>
@@ -760,13 +769,16 @@
       const texto = normalizar(buscar.value.trim());
 
       const filtrados = materiales.filter(recurso => {
-        const coincideCategoria =
-          categoriaActual === 'Todos' ||
-          obtenerCategoria(recurso) === categoriaActual;
+       const coincideCategoria =
+  categoriaActual === 'Todos' ||
+  obtenerCategorias(recurso).some(
+    categoria =>
+      normalizar(categoria) === normalizar(categoriaActual)
+  );
 
         const contenido = normalizar(
           recurso.nombre + ' ' +
-          obtenerCategoria(recurso) + ' ' +
+          obtenerCategorias(recurso).join(' ') + ' ' +
           recurso.ruta
         );
 
