@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --azul-oscuro: #15384e;
+      --azul: #28617c;
+      --azul-claro: #eaf3f8;
+      --fondo: #f5f8fb;
+      --texto: #243746;
+      --gris: #6c7e8c;
+      --borde: #e0e9f0;
+      --dorado: #d5a94e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--dorado);
+      outline-offset: 3px;
+    }
+
+    .biblioteca {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 18px 60px;
+    }
+
+    /* CABECERA RELISEVILLA */
+
+    .hero {
+      background: linear-gradient(
+        125deg,
+        var(--azul-oscuro),
+        var(--azul)
+      );
+      color: white;
+      border-radius: 20px;
+      padding: 45px 6%;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border: 35px solid rgba(255,255,255,.06);
+      border-radius: 50%;
+      right: -70px;
+      top: -95px;
+      pointer-events: none;
+    }
+
+    .hero small {
+      display: block;
+      color: #e8d39d;
+      font-size: 12px;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .hero h1 {
+      font-size: clamp(27px, 4vw, 42px);
+      line-height: 1.2;
+      margin: 13px 0;
+      max-width: 800px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: 0;
+      font-size: 16px;
+      color: #e5eff5;
+    }
+
+    /* BUSCADOR */
+
+    .panel-busqueda {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 23px;
+      box-shadow: 0 4px 18px rgba(20,55,78,.04);
+    }
+
+    .panel-busqueda h2 {
+      font-size: 19px;
+      margin: 0 0 5px;
+      color: var(--azul-oscuro);
+    }
+
+    .panel-busqueda p {
+      margin: 0 0 15px;
+      color: var(--gris);
+      font-size: 14px;
+    }
+
+    .buscador {
+      width: 100%;
+      padding: 15px 17px;
+      border: 1px solid #cddce7;
+      border-radius: 11px;
+      outline-color: var(--azul);
+      font-size: 16px;
+      background: #fbfdff;
+      color: var(--texto);
+    }
+
+    /* CATEGORÍAS */
+
+    .categorias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 20px 0 27px;
+    }
+
+    .categoria {
+      background: white;
+      border: 1px solid #d4e1e9;
+      color: var(--azul);
+      border-radius: 30px;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .categoria:hover {
+      background: var(--azul-claro);
+      border-color: var(--azul);
+    }
+
+    .categoria.activa {
+      background: var(--azul);
+      border-color: var(--azul);
+      color: white;
+    }
+
+    /* CABECERA DEL CATÁLOGO */
+
+    .barra {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 19px;
+    }
+
+    .barra h2 {
+      font-size: 23px;
+      color: var(--azul-oscuro);
+      margin: 0;
+    }
+
+    .contador {
+      background: #e8f0f6;
+      color: var(--azul);
+      border-radius: 30px;
+      padding: 7px 13px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* TARJETAS */
+
+    .recursos {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 17px;
+      width: 100%;
+    }
+
+    .tarjeta {
+      min-width: 0;
+      width: 100%;
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      padding: 13px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      box-shadow: 0 3px 12px rgba(20,55,78,.035);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 24px rgba(20,55,78,.11);
+    }
+
+    /* PORTADAS DE DRIVE */
+
+    .miniatura {
+      width: 100%;
+      height: 185px;
+      max-height: 185px;
+      min-width: 0;
+      overflow: hidden;
+      background: #f4f6f8;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .miniatura img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .miniatura.sin-imagen {
+      background: #edf3f8;
+      color: var(--azul);
+      font-size: 43px;
+    }
+
+    .etiqueta {
+      color: var(--azul);
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: .5px;
+      overflow-wrap: anywhere;
+      min-height: 18px;
+    }
+
+    .enlace {
+      display: block;
+      width: 100%;
+      margin-top: auto;
+      padding: 11px 13px;
+      background: var(--azul-claro);
+      color: var(--azul-oscuro);
+      text-align: center;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    .enlace:hover {
+      background: var(--azul);
+      color: white;
+    }
+
+    /* AUTOR DE LOS MATERIALES COMPARTIDOS */
+    .tarjeta-colaborador {
+      font-size: 12px;
+      color: var(--azul-oscuro);
+      background: var(--azul-claro);
+      border-radius: 8px;
+      padding: 8px 10px;
+      overflow-wrap: anywhere;
+    }
+
+    /* MENSAJES */
+
+    .estado {
+      text-align: center;
+      padding: 28px 15px;
+      color: var(--gris);
+      font-size: 15px;
+    }
+
+    .estado:empty {
+      display: none;
+    }
+
+    .pie {
+      margin-top: 40px;
+      border-top: 1px solid var(--borde);
+      padding-top: 22px;
+      text-align: center;
+      color: var(--gris);
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 950px) {
+      .recursos {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .recursos {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .hero {
+        padding: 33px 25px;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .biblioteca {
+        padding: 12px 11px 35px;
+      }
+
+      .recursos {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 10px;
+      }
+
+      .tarjeta {
+        padding: 9px;
+      }
+
+      .miniatura {
+        height: 145px;
+        max-height: 145px;
+      }
+
+      .panel-busqueda {
+        padding: 16px;
+      }
+
+      .categoria {
+        padding: 8px 12px;
+        font-size: 12px;
+      }
+
+      .barra h2 {
+        font-size: 19px;
+      }
+    }
+
+    /* ÚLTIMOS RECURSOS INCORPORADOS */
+    .novedades { margin: 0 0 24px; }
+    .novedades-encabezado { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+    .novedades-encabezado h2 { margin:0; color:var(--azul-oscuro); font-size:23px; }
+    .novedades-encabezado p { margin:2px 0 0; font-size:13px; color:var(--gris); }
+    .novedades-lista { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; }
+    .novedades .tarjeta { position:relative; }
+    .novedades .miniatura { height:150px; max-height:150px; }
+    .novedades .tarjeta-nombre { font-size:13px; line-height:1.4; font-weight:bold; overflow-wrap:anywhere; }
+    .novedades .tarjeta-fecha { color:var(--gris); font-size:11px; }
+    .novedades .tarjeta .enlace { margin-top:auto; }
+    .novedades-vacio { color:var(--gris); font-size:14px; }
+    @media (max-width:700px) { .novedades-lista { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:440px) { .novedades-lista { gap:10px; } .novedades .miniatura { height:120px; max-height:120px; } .novedades-encabezado h2 { font-size:20px; } }
+    /* AVISO DE ERRORES · RELISEVILLA */
+    .aviso-error-boton {position:fixed;right:22px;bottom:22px;z-index:1000;background:#15384e;color:#fff;border:0;border-radius:28px;padding:13px 18px;box-shadow:0 6px 20px #15384e44;cursor:pointer;font-weight:bold}
+    .aviso-error-fondo[hidden] {display:none}
+    .aviso-error-fondo {position:fixed;inset:0;z-index:1100;background:#142d3dc9;display:flex;align-items:center;justify-content:center;padding:18px}
+    .aviso-error-panel {background:#fff;border-radius:17px;padding:25px;max-width:470px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 14px 40px #0003}
+    .aviso-error-panel h2 {margin:0 0 10px;color:#15384e;font-size:22px}
+    .aviso-error-panel label {display:block;font-weight:bold;margin:14px 0 5px}
+    .aviso-error-panel select,.aviso-error-panel textarea {width:100%;border:1px solid #bacbd8;border-radius:8px;padding:10px;font:inherit}
+    .aviso-error-panel textarea {min-height:115px;resize:vertical}
+    .aviso-error-acciones {display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}
+    .aviso-error-acciones button {border:0;border-radius:9px;padding:11px 15px;cursor:pointer}
+    .aviso-error-cancelar {background:#eaf3f8;color:#15384e}
+    .aviso-error-enviar {background:#28617c;color:#fff}
+    @media(max-width:440px){.aviso-error-boton{right:12px;bottom:12px;padding:11px 14px;font-size:13px}}
+  </style>
+</head>
+
+<body>
+
+  <main class="biblioteca">
+
+    <header class="hero">
+      <small>RELISEVILLA · Recursos para docentes</small>
+
+      <h1>Biblioteca de materiales imprimibles</h1>
+
+      <p>
+        Explora recursos didácticos para tus clases de
+        Religión Católica. Descubre fichas, actividades,
+        juegos, manualidades y propuestas educativas
+        organizadas por temáticas.
+      </p>
+    </header>
+
+<!-- AVISO DE ACTUALIZACIÓN DE LA BIBLIOTECA -->
+<div style="
+  background:#eff5fa;
+  border:1px solid #c9dfef;
+  border-left:4px solid #28617c;
+  border-radius:12px;
+  padding:20px 24px;
+  margin-bottom:24px;
+  color:#405a70;
+  line-height:1.7;
+">
+  <div style="
+    font-size:17px;
+    font-weight:bold;
+    color:#15384e;
+    margin-bottom:8px;
+  ">
+    ✨ Estamos renovando nuestra biblioteca de recursos
+  </div>
+
+  <p style="margin:0 0 10px;">
+    En RELISEVILLA estamos actualizando y reorganizando
+    nuestros materiales para ofrecerte una experiencia
+    más visual, accesible y sencilla.
+  </p>
+
+  <p style="margin:0 0 10px;">
+    Por el momento, encontrarás disponibles los recursos
+    de <strong>Adviento y Navidad</strong>.
+    Próximamente iremos incorporando nuevas temáticas
+    y materiales para tus clases de Religión Católica.
+  </p>
+
+  <p style="
+    margin:0;
+    font-weight:bold;
+    color:#28617c;
+  ">
+    ¡Gracias por acompañarnos en esta renovación!
+  </p>
+</div>
+
+
+    <section class="novedades" id="seccion-novedades" aria-label="Últimos materiales añadidos" hidden>
+      <div class="novedades-encabezado">
+        <div>
+          <h2>✨ Últimos recursos añadidos</h2>
+          <p>Descubre las incorporaciones más recientes a nuestra biblioteca.</p>
+        </div>
+      </div>
+      <div id="novedades-lista" class="novedades-lista"></div>
+    </section>
+
+    <section class="panel-busqueda">
+      <h2>Encuentra recursos para tu aula</h2>
+      <p>
+        Busca por palabras clave o selecciona una
+        categoría para descubrir los materiales.
+      </p>
+
+      <input
+        id="buscar"
+        class="buscador"
+        type="search"
+        placeholder="Buscar Adviento, Navidad, juegos, fichas..."
+        aria-label="Buscar recursos educativos"
+      >
+    </section>
+
+    <nav
+      id="categorias"
+      class="categorias"
+      aria-label="Categorías de materiales"
+    ></nav>
+
+    <section aria-label="Catálogo de materiales">
+
+      <div class="barra">
+        <h2>Explora los materiales</h2>
+        <span id="contador" class="contador"></span>
+      </div>
+
+      <div id="estado" class="estado" role="status">
+        Preparando el catálogo de materiales...
+      </div>
+
+      <div id="recursos" class="recursos"></div>
+
+    </section>
+
+    <footer class="pie">
+      RELISEVILLA · Recursos educativos para el
+      profesorado de Religión Católica
+    </footer>
+
+  </main>
+
+  <!-- Avisos de errores de Material imprimible -->
+  <button type="button" class="aviso-error-boton" id="abrir-aviso-error">⚠ ¿Has encontrado un error?</button>
+  <div class="aviso-error-fondo" id="fondo-aviso-error" hidden>
+    <section class="aviso-error-panel" role="dialog" aria-modal="true" aria-labelledby="titulo-aviso-error">
+      <h2 id="titulo-aviso-error">Ayúdanos a mejorar RELISEVILLA</h2>
+      <p>Cuéntanos qué ha ocurrido para que podamos revisarlo.</p>
+      <form id="formulario-aviso-error">
+        <label for="tipo-aviso-error">¿Qué problema has encontrado?</label>
+        <select id="tipo-aviso-error" required>
+          <option value="">Selecciona una opción</option>
+          <option>Enlace que no funciona</option>
+          <option>No puedo abrir un recurso</option>
+          <option>Problema con un perfil</option>
+          <option>Otro error</option>
+        </select>
+        <label for="detalle-aviso-error">Explícanos el problema</label>
+        <textarea id="detalle-aviso-error" required minlength="10" maxlength="2000" placeholder="Indica el nombre del recurso y qué sucede..."></textarea>
+        <p style="font-size:12px;color:#6c7e8c">El aviso se enviará al equipo de RELISEVILLA. Por limitaciones técnicas, la página no puede confirmar automáticamente su recepción.</p>
+        <div class="aviso-error-acciones">
+          <button type="button" class="aviso-error-cancelar" id="cerrar-aviso-error">Cancelar</button>
+          <button type="submit" class="aviso-error-enviar">Enviar aviso</button>
+        </div>
+        <p id="resultado-aviso-error" role="status" aria-live="polite" style="font-size:13px;margin:10px 0 0;"></p>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    // Envío al servicio independiente de Material imprimible.
+    // Con no-cors no se puede comprobar la respuesta del servidor.
+    const URL_AVISOS_MATERIAL = 'https://script.google.com/macros/s/AKfycbzVxj0StxWUCy4REUUQbNNbmC-KwTp92LDktLoVVVXSIwpznEBiBoAulUc2IxLOx0Dr5g/exec';
+    const fondoAvisoError = document.getElementById('fondo-aviso-error');
+    const botonAbrirAviso = document.getElementById('abrir-aviso-error');
+    const botonCerrarAviso = document.getElementById('cerrar-aviso-error');
+    const formularioAviso = document.getElementById('formulario-aviso-error');
+    const resultadoAviso = document.getElementById('resultado-aviso-error');
+    const botonEnviarAviso = formularioAviso.querySelector('[type="submit"]');
+    botonAbrirAviso.addEventListener('click', () => {
+      fondoAvisoError.hidden = false;
+      document.getElementById('tipo-aviso-error').focus();
+    });
+    function cerrarAvisoError() { fondoAvisoError.hidden = true; botonAbrirAviso.focus(); }
+    botonCerrarAviso.addEventListener('click', cerrarAvisoError);
+    fondoAvisoError.addEventListener('click', e => { if (e.target === fondoAvisoError) cerrarAvisoError(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !fondoAvisoError.hidden) cerrarAvisoError(); });
+    formularioAviso.addEventListener('submit', async e => {
+      e.preventDefault();
+      const tipo = document.getElementById('tipo-aviso-error').value;
+      const descripcion = document.getElementById('detalle-aviso-error').value.trim();
+      if (!formularioAviso.reportValidity() || descripcion.length < 10) return;
+      botonEnviarAviso.disabled = true;
+      resultadoAviso.textContent = 'Enviando solicitud…';
+      try {
+        await fetch(URL_AVISOS_MATERIAL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+          body: JSON.stringify({
+            origen: 'Material imprimible',
+            tipo,
+            descripcion,
+            pagina: location.href
+          })
+        });
+        resultadoAviso.textContent = 'La solicitud se ha enviado, pero no podemos confirmar automáticamente su recepción. Si el problema continúa, puedes volver a intentarlo más tarde.';
+      } catch (error) {
+        resultadoAviso.textContent = 'No se ha podido enviar la solicitud. Comprueba tu conexión e inténtalo de nuevo.';
+      } finally {
+        botonEnviarAviso.disabled = false;
+      }
+    });
+
+    let materiales = [];
+    let categoriaActual = 'Todos';
+
+    const buscar = document.getElementById('buscar');
+    const categorias = document.getElementById('categorias');
+    const contenedor = document.getElementById('recursos');
+    const contador = document.getElementById('contador');
+    const estado = document.getElementById('estado');
+
+    function crearElemento(tag, clase, texto) {
+      const elemento = document.createElement(tag);
+
+      if (clase) elemento.className = clase;
+
+      if (texto !== undefined) {
+        elemento.textContent = texto;
+      }
+
+      return elemento;
+    }
+
+    function normalizar(texto) {
+      return String(texto || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function obtenerCategoria(recurso) {
+      return recurso.categoria || 'General';
+    }
+
+    function dibujarCategorias() {
+      categorias.replaceChildren();
+
+      const ordenPreferido = [
+        'Adviento',
+        'Navidad',
+        'Reyes Magos y Epifanía',
+        'Actividades y Juegos',
+        'Manualidades y decoración',
+        'Celebraciones y tradiciones',
+        'Material variado'
+      ];
+
+      const nombresReales = [
+        ...new Set(materiales.map(obtenerCategoria))
+      ];
+
+      nombresReales.sort((a, b) => {
+        const posicion = nombre =>
+          ordenPreferido.findIndex(
+            x => normalizar(x) === normalizar(nombre)
+          );
+
+        const pa = posicion(a);
+        const pb = posicion(b);
+
+        if (pa !== pb) {
+          return (pa < 0 ? 999 : pa) -
+                 (pb < 0 ? 999 : pb);
+        }
+
+        return a.localeCompare(b, 'es');
+      });
+
+      ['Todos', ...nombresReales].forEach(nombre => {
+        const boton = crearElemento(
+          'button', 'categoria', nombre
+        );
+
+        boton.type = 'button';
+
+        const activa = nombre === categoriaActual;
+
+        boton.classList.toggle('activa', activa);
+        boton.setAttribute('aria-pressed', String(activa));
+
+        boton.addEventListener('click', () => {
+          categoriaActual = nombre;
+          dibujarCategorias();
+          dibujarRecursos();
+        });
+
+        categorias.appendChild(boton);
+      });
+    }
+
+    function crearTarjeta(recurso) {
+      const tarjeta = crearElemento('article', 'tarjeta');
+
+      const miniatura = crearElemento('a', 'miniatura');
+      miniatura.href = recurso.url;
+      miniatura.target = '_blank';
+      miniatura.rel = 'noopener noreferrer';
+      miniatura.setAttribute(
+        'aria-label',
+        'Abrir recurso: ' + recurso.nombre
+      );
+
+      const imagen = document.createElement('img');
+      imagen.alt = 'Vista previa del material';
+      imagen.loading = 'lazy';
+
+      imagen.onerror = function() {
+        miniatura.replaceChildren();
+        miniatura.classList.add('sin-imagen');
+        miniatura.textContent =
+          recurso.tipo === 'application/pdf' ? '📄' : '📁';
+      };
+
+      imagen.src =
+        'https://drive.google.com/thumbnail?id=' +
+        encodeURIComponent(recurso.id) +
+        '&sz=w500';
+
+      miniatura.appendChild(imagen);
+
+      const etiqueta = crearElemento(
+        'div',
+        'etiqueta',
+        obtenerCategoria(recurso)
+      );
+
+      const enlace = crearElemento(
+        'a',
+        'enlace',
+        'Abrir recurso ↗'
+      );
+
+      enlace.href = recurso.url;
+      enlace.target = '_blank';
+      enlace.rel = 'noopener noreferrer';
+
+      tarjeta.append(miniatura, etiqueta);
+
+      if (recurso.colaborador) {
+        const autor = crearElemento(
+          'div',
+          'tarjeta-colaborador',
+          '👤 Compartido por ' + recurso.colaborador
+        );
+        tarjeta.appendChild(autor);
+      }
+
+      tarjeta.appendChild(enlace);
+
+      return tarjeta;
+    }
+
+
+    function dibujarNovedades() {
+      const seccion = document.getElementById('seccion-novedades');
+      const lista = document.getElementById('novedades-lista');
+      const recientes = materiales
+        .filter(recurso => Number.isFinite(Number(recurso.fechaIncorporacion)) && Number(recurso.fechaIncorporacion) > 0)
+        .sort((a, b) => Number(b.fechaIncorporacion) - Number(a.fechaIncorporacion) || a.nombre.localeCompare(b.nombre, 'es'))
+        .slice(0, 6);
+
+      lista.replaceChildren();
+      seccion.hidden = recientes.length === 0;
+      recientes.forEach(recurso => {
+        const tarjeta = crearTarjeta(recurso);
+        const nombre = crearElemento('div', 'tarjeta-nombre', recurso.nombre);
+        const fecha = new Date(Number(recurso.fechaIncorporacion));
+        const etiquetaFecha = crearElemento('div', 'tarjeta-fecha',
+          'Incorporado: ' + fecha.toLocaleDateString('es-ES', { day:'numeric', month:'long', year:'numeric' }));
+        const enlace = tarjeta.querySelector('.enlace');
+        tarjeta.insertBefore(nombre, enlace);
+        tarjeta.insertBefore(etiquetaFecha, enlace);
+        lista.appendChild(tarjeta);
+      });
+    }
+
+    function dibujarRecursos() {
+      const texto = normalizar(buscar.value.trim());
+
+      const filtrados = materiales.filter(recurso => {
+        const coincideCategoria =
+          categoriaActual === 'Todos' ||
+          obtenerCategoria(recurso) === categoriaActual;
+
+        const contenido = normalizar(
+          recurso.nombre + ' ' +
+          obtenerCategoria(recurso) + ' ' +
+          recurso.ruta
+        );
+
+        return coincideCategoria &&
+               contenido.includes(texto);
+      });
+
+      contenedor.replaceChildren();
+
+      contador.textContent =
+        filtrados.length + ' recursos';
+
+      estado.textContent = filtrados.length
+        ? ''
+        : 'No se han encontrado materiales con esos filtros.';
+
+      filtrados.forEach(recurso => {
+        contenedor.appendChild(crearTarjeta(recurso));
+      });
+    }
+
+    buscar.addEventListener('input', dibujarRecursos);
+
+    // Catálogo público: se conectará a Google Drive en una fase posterior.
+    // La página no depende de google.script.run para mostrarse en móviles.
+    fetch('./recursos.json', { cache: 'no-store' })
+      .then(respuesta => {
+        if (!respuesta.ok) throw new Error('Catálogo pendiente de publicar');
+        return respuesta.json();
+      })
+      .then(datos => {
+        materiales = Array.isArray(datos) ? datos : [];
+        dibujarCategorias();
+        dibujarNovedades();
+        dibujarRecursos();
+      })
+      .catch(() => {
+        estado.textContent =
+          'Estamos preparando la conexión con nuestros materiales de Google Drive. ' +
+          'Esta es una versión de prueba del diseño.';
+        contador.textContent = 'Vista de prueba';
+      });
+
+  </script>
+
+</body>
+</html>
