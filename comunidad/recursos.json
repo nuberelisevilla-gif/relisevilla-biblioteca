@@ -6,7 +6,17 @@
       "blog": "",
       "whatsapp": "",
       "avatar": "",
-      "materiales": []
+      "materiales": [
+        {
+          "nombre": "perfil_antoniomanz.jpg",
+          "url": "https://drive.google.com/file/d/1bH75GGo2s-5p1OFnTLPNLWTNsNNJNfPW/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1bH75GGo2s-5p1OFnTLPNLWTNsNNJNfPW&sz=w700",
+          "tipo": "image/jpeg",
+          "fechaOrden": 1795879497138,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        }
+      ]
     },
     {
       "nombre": "@anac.reli",
@@ -956,6 +966,17 @@
   ],
   "novedades": [
     {
+      "nombre": "perfil_antoniomanz.jpg",
+      "url": "https://drive.google.com/file/d/1bH75GGo2s-5p1OFnTLPNLWTNsNNJNfPW/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1bH75GGo2s-5p1OFnTLPNLWTNsNNJNfPW&sz=w700",
+      "tipo": "image/jpeg",
+      "fechaOrden": 1795879497138,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@a._manzano",
+      "instagram": ""
+    },
+    {
       "nombre": "dijiste Sí.pdf",
       "url": "https://drive.google.com/file/d/146mbaXy4T0MATRZN0p7AbLnlzlXyKIij/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=146mbaXy4T0MATRZN0p7AbLnlzlXyKIij&sz=w700",
@@ -1071,17 +1092,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=14CozLopQHrOljFTZ9JNl_9IEYQkOIrBB&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795798023047,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 4ºEP.pdf",
-      "url": "https://drive.google.com/file/d/1Gq9HRuosAIiKd16Rjys6R9LW4vjnFJu_/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1Gq9HRuosAIiKd16Rjys6R9LW4vjnFJu_&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798023034,
       "fecha": "27/11/2026",
       "nuevo": true,
       "autora": "@relianaherrainz",
