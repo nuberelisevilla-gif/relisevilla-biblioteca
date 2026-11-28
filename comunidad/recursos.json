@@ -16,6 +16,42 @@
       "avatar": "https://drive.google.com/thumbnail?id=1S2bXBok4wA59HTPlGU09b0trbjoPRo_I&sz=w400",
       "materiales": [
         {
+          "nombre": "Adviento 2026.pdf",
+          "url": "https://drive.google.com/file/d/1e8LfD_ynbWcQ2fwoOIH9oknChzsMK1um/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1e8LfD_ynbWcQ2fwoOIH9oknChzsMK1um&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795895256334,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "estrellas copo2.pdf",
+          "url": "https://drive.google.com/file/d/1SJhLxEsAheSTwmD1Jdeb0-nUMv5cilqk/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1SJhLxEsAheSTwmD1Jdeb0-nUMv5cilqk&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795895253736,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "Cartel Navidad A4.pdf",
+          "url": "https://drive.google.com/file/d/1VJn3z-DrK2Hh25TBGua-fM3uIayPPrzR/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1VJn3z-DrK2Hh25TBGua-fM3uIayPPrzR&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795895248615,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        },
+        {
+          "nombre": "ESTRELLAS DECORACIÓN.pdf.pdf",
+          "url": "https://drive.google.com/file/d/1uMMFLdjpqQKk_2rZQUCnPQ_UiQRDraoQ/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1uMMFLdjpqQKk_2rZQUCnPQ_UiQRDraoQ&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795895245749,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Aprendemos palabras en reli.pdf.pdf",
           "url": "https://drive.google.com/file/d/1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2&sz=w700",
@@ -965,6 +1001,50 @@
   ],
   "novedades": [
     {
+      "nombre": "Adviento 2026.pdf",
+      "url": "https://drive.google.com/file/d/1e8LfD_ynbWcQ2fwoOIH9oknChzsMK1um/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1e8LfD_ynbWcQ2fwoOIH9oknChzsMK1um&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795895256334,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@anac.reli",
+      "instagram": "https://www.instagram.com/anac.reli/"
+    },
+    {
+      "nombre": "estrellas copo2.pdf",
+      "url": "https://drive.google.com/file/d/1SJhLxEsAheSTwmD1Jdeb0-nUMv5cilqk/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1SJhLxEsAheSTwmD1Jdeb0-nUMv5cilqk&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795895253736,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@anac.reli",
+      "instagram": "https://www.instagram.com/anac.reli/"
+    },
+    {
+      "nombre": "Cartel Navidad A4.pdf",
+      "url": "https://drive.google.com/file/d/1VJn3z-DrK2Hh25TBGua-fM3uIayPPrzR/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1VJn3z-DrK2Hh25TBGua-fM3uIayPPrzR&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795895248615,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@anac.reli",
+      "instagram": "https://www.instagram.com/anac.reli/"
+    },
+    {
+      "nombre": "ESTRELLAS DECORACIÓN.pdf.pdf",
+      "url": "https://drive.google.com/file/d/1uMMFLdjpqQKk_2rZQUCnPQ_UiQRDraoQ/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1uMMFLdjpqQKk_2rZQUCnPQ_UiQRDraoQ&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795895245749,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@anac.reli",
+      "instagram": "https://www.instagram.com/anac.reli/"
+    },
+    {
       "nombre": "Aprendemos palabras en reli.pdf.pdf",
       "url": "https://drive.google.com/file/d/1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1Rj_1rKezZTanAnLG5tEiNkOYQWuG3ND2&sz=w700",
@@ -1047,50 +1127,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1DyjkMZ2H5jow_stvmkKZ9VXIS0jUNKea&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795798023432,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 1º EP.pdf",
-      "url": "https://drive.google.com/file/d/1dGM2fAt1oOoeYl69iwTBY_3lkWAPB3AW/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1dGM2fAt1oOoeYl69iwTBY_3lkWAPB3AW&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798023401,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 6º EP.pdf",
-      "url": "https://drive.google.com/file/d/17_iIok_1L8IRHjyOvtw64o7dD3LzuJZr/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=17_iIok_1L8IRHjyOvtw64o7dD3LzuJZr&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798023128,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 3º EP.pdf",
-      "url": "https://drive.google.com/file/d/1U1A5-WRJnIBssbNljXJxJVDC9FchurTz/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=1U1A5-WRJnIBssbNljXJxJVDC9FchurTz&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798023081,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 4º EP.pdf",
-      "url": "https://drive.google.com/file/d/14CozLopQHrOljFTZ9JNl_9IEYQkOIrBB/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=14CozLopQHrOljFTZ9JNl_9IEYQkOIrBB&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798023047,
       "fecha": "27/11/2026",
       "nuevo": true,
       "autora": "@relianaherrainz",
