@@ -71,6 +71,15 @@
       "avatar": "https://drive.google.com/thumbnail?id=1NRdZOOGRUbrVqghoUI9Xn_coAcUCxlll&sz=w400",
       "materiales": [
         {
+          "nombre": "Bordes pizarra.pdf",
+          "url": "https://drive.google.com/file/d/1Lux3x9rVvTtGD_GC64CBqtSKqAwQdGmb/view?usp=drivesdk",
+          "miniatura": "https://drive.google.com/thumbnail?id=1Lux3x9rVvTtGD_GC64CBqtSKqAwQdGmb&sz=w700",
+          "tipo": "application/pdf",
+          "fechaOrden": 1795853873830,
+          "fecha": "28/11/2026",
+          "nuevo": true
+        },
+        {
           "nombre": "Pasitos hacia la navidad",
           "url": "https://drive.google.com/file/d/1lAFUt44rWJKvYGFjJsAdqRgKKqWManGx/view?usp=drivesdk",
           "miniatura": "https://drive.google.com/thumbnail?id=1lAFUt44rWJKvYGFjJsAdqRgKKqWManGx&sz=w700",
@@ -930,6 +939,17 @@
   ],
   "novedades": [
     {
+      "nombre": "Bordes pizarra.pdf",
+      "url": "https://drive.google.com/file/d/1Lux3x9rVvTtGD_GC64CBqtSKqAwQdGmb/view?usp=drivesdk",
+      "miniatura": "https://drive.google.com/thumbnail?id=1Lux3x9rVvTtGD_GC64CBqtSKqAwQdGmb&sz=w700",
+      "tipo": "application/pdf",
+      "fechaOrden": 1795853873830,
+      "fecha": "28/11/2026",
+      "nuevo": true,
+      "autora": "@maestraarc",
+      "instagram": "https://www.instagram.com/maestraarc/"
+    },
+    {
       "nombre": "REPASO MI NAVIDAD 6ºEP.pdf",
       "url": "https://drive.google.com/file/d/1F3nkkEbfJhSHbqjAVLdQawnowJ3QYmKI/view?usp=drivesdk",
       "miniatura": "https://drive.google.com/thumbnail?id=1F3nkkEbfJhSHbqjAVLdQawnowJ3QYmKI&sz=w700",
@@ -1045,17 +1065,6 @@
       "miniatura": "https://drive.google.com/thumbnail?id=1neCXILaJkbgSTu_Akdfqg-zslPC_H4Ag&sz=w700",
       "tipo": "application/pdf",
       "fechaOrden": 1795798023031,
-      "fecha": "27/11/2026",
-      "nuevo": true,
-      "autora": "@relianaherrainz",
-      "instagram": ""
-    },
-    {
-      "nombre": "REPASO MI NAVIDAD 5ºEP.pdf",
-      "url": "https://drive.google.com/file/d/18s-oimbtLfliWHYJSPATrZmokLOwXhKc/view?usp=drivesdk",
-      "miniatura": "https://drive.google.com/thumbnail?id=18s-oimbtLfliWHYJSPATrZmokLOwXhKc&sz=w700",
-      "tipo": "application/pdf",
-      "fechaOrden": 1795798022864,
       "fecha": "27/11/2026",
       "nuevo": true,
       "autora": "@relianaherrainz",
